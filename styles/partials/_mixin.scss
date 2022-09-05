@@ -1,0 +1,38 @@
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-around {
+  justify-content: space-around;
+  @include flex-center;
+}
+
+@mixin card {
+  @include flex-around;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@mixin flex-between {
+  @include flex-center;
+  justify-content: space-between;
+}
+
+@mixin flex-evenly {
+  @include flex-center;
+  justify-content: space-evenly;
+}
+
+
+@mixin display-center {
+  display: flex;
+  align-items: center;
+}

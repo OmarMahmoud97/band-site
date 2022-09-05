@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("/assets/Font/alternative-files/AvenirNextLTPro.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("./assets/Font//AvenirNextLTPro-Demi.otf") format("otf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("./assets/Font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700;
+}
+.navbar {
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #323232;
+}
+.navbar__header {
+  width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+.navbar__subheader {
+  padding-top: 0.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+.navbar__subheader .navbar__subheader--container--active {
+  border-bottom: 0.3rem white solid;
+  width: 50%;
+  text-align: center;
+}
+.navbar__subheader .navbar__subheader--container--active h2 {
+  padding-bottom: 1rem;
+}
+.navbar__subheader .navbar__subheader--container {
+  width: 50%;
+  text-align: center;
+}
+.navbar__subheader .navbar__subheader--container h2 {
+  padding-bottom: 1rem;
+}
+
+.hero {
+  background-image: url(/assets/Images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+}
+.hero__title {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 1.5rem;
+}
+
+.musicians {
+  margin: 1rem;
+}
+.musicians__header h2 {
+  color: #323232;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.musicians__img img {
+  width: 100%;
+}
+.musicians__caption .text {
+  padding-top: 1rem;
+}
+.musicians__text .text {
+  padding-top: 1rem;
+}
+
+.gallery {
+  margin: 1rem;
+}
+.gallery__title h2 {
+  font-size: 2rem;
+}
+.gallery__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery__container .img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #323232;
+  height: 80vh;
+}/*# sourceMappingURL=bio.css.map */
