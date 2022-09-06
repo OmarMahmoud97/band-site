@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./resets" as *;
+@use "./fonts" as *;
+
+.gallery {
+  margin: 1rem;
+
+  &__title {
+    font-size: 2rem;
+  }
+  &__container {
+    width: 100%;
+    @include flex-center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
