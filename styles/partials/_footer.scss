@@ -1,0 +1,30 @@
+@use "./mixin" as *;
+@use "./variables" as *;
+@use "./resets" as *;
+@use "./fonts" as *;
+
+.footer {
+  margin: 1rem 1rem 0 1rem;
+  color: white;
+  background-color: #323232;
+  height: 100%;
+  &__container {
+    .footer__header {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+    .footer__icons {
+      width: 55%;
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem 0 1rem 0;
+      .icon {
+        width: 2rem;
+      }
+      .icon-f {
+        width: 1.2rem;
+      }
+    }
+  }
+}

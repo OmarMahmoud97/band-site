@@ -1,51 +1,66 @@
-@use "./mixin" as*;
-@use "./variables" as*;
-@use "./resets" as*;
+@use "./mixin" as *;
+@use "./variables" as *;
+@use "./resets" as *;
+@use "./fonts" as *;
 
-.navbar{
+.navbar {
   padding-top: 0.8rem;
   display: flex;
-  align-items:flex-start;
-  justify-content:space-around ;
+  align-items: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
   background-color: $primarycolor;
-  &__header{
-   width: 100vw;
+  &__header {
+    width: 100vw;
     text-align: center;
     font-size: 2rem;
     color: $primarycolor3;
   }
-  &__subheader{
-    padding-top: 0.8rem;
-width: 100%;
-@include flex-evenly;
-color: $primarycolor3;
-.navbar__subheader--container--active{
-  border-bottom: 0.3rem $primarycolor3 solid;
-  width: 50%;
-  text-align: center;
-  h2{
+  &__subheader {
+    width: 100%;
+    @include flex-evenly;
+    color: $primarycolor3;
+    list-style: none;
+    .navbar__subheader--container--active {
+      border-bottom: 0.3rem $primarycolor3 solid;
+      width: 50%;
+      text-align: center;
+      color: $primarycolor3;
+      a {
+        color: $primarycolor3;
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        height: 100%;
+        padding: 1rem 0 0 0;
+      }
+      h2 {
         padding-bottom: 1rem;
-  }
-}
-.navbar__subheader--container{
-  width: 50%;
-  text-align: center;
-  h2{
+      }
+    }
+    .navbar__subheader--container {
+      width: 50%;
+      text-align: center;
+      color: $primarycolor3;
+      a {
+        color: $primarycolor3;
+        text-decoration: none;
+      }
+      h2 {
         padding-bottom: 1rem;
-  }
-}
+      }
+    }
   }
 }
 
-.hero{
+.hero {
   background-image: url(/assets/Images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
   height: 30vh;
   display: flex;
   align-items: center;
-  &__title{
+  &__title {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
