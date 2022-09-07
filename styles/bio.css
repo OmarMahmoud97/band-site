@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenirbold";
+  src: url("./assets/Font//AvenirNextLTPro-Demi.otf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenirbolder";
+  src: url("./assets/Font/AvenirNextLTPro-Bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
 *,
 *::before,
 *::after {
@@ -10,24 +28,6 @@ body {
   font-family: "AvenirNext";
 }
 
-@font-face {
-  font-family: "AvenirNext";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf");
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "AvenirNext";
-  src: url("./assets/Font//AvenirNextLTPro-Demi.otf");
-  font-style: normal;
-  font-weight: 600;
-}
-@font-face {
-  font-family: "AvenirNext";
-  src: url("./assets/Font/AvenirNextLTPro-Bold.otf");
-  font-style: normal;
-  font-weight: 700;
-}
 .navbar {
   padding-top: 0.8rem;
   display: flex;
@@ -36,13 +36,22 @@ body {
   flex-wrap: wrap;
   background-color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 .navbar__header {
   width: 100vw;
   text-align: center;
-  font-size: 2rem;
   color: white;
 }
-.navbar__subheader {
+.navbar__logo {
+  width: 8.5rem;
+}
+.navbar__subheader-container {
   width: 100%;
   display: flex;
   align-items: center;
@@ -50,13 +59,23 @@ body {
   color: white;
   list-style: none;
 }
-.navbar__subheader .navbar__subheader--container--active {
+@media screen and (min-width: 768px) {
+  .navbar__subheader-container {
+    width: 25%;
+  }
+}
+.navbar__subheader-active {
   border-bottom: 0.3rem white solid;
   width: 50%;
   text-align: center;
   color: white;
 }
-.navbar__subheader .navbar__subheader--container--active a {
+@media screen and (min-width: 768px) {
+  .navbar__subheader-active {
+    width: 25%;
+  }
+}
+.navbar__subheader-active a {
   color: white;
   text-decoration: none;
   width: 100%;
@@ -64,36 +83,31 @@ body {
   height: 100%;
   padding: 1rem 0 0 0;
 }
-.navbar__subheader .navbar__subheader--container--active h2 {
+@media screen and (min-width: 768px) {
+  .navbar__subheader-active a {
+    padding: 0;
+  }
+}
+.navbar__subheader-active h2 {
   padding-bottom: 1rem;
 }
-.navbar__subheader .navbar__subheader--container {
+.navbar__subheader {
   width: 50%;
   text-align: center;
-  color: white;
 }
-.navbar__subheader .navbar__subheader--container a {
+.navbar__subheader a {
+  color: white;
   color: white;
   text-decoration: none;
+  width: 100%;
+  display: block;
+  height: 100%;
+  padding: 1rem 0 0 0;
 }
-.navbar__subheader .navbar__subheader--container h2 {
-  padding-bottom: 1rem;
-}
-
-.hero {
-  background-image: url(/assets/Images/hero-bio.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-}
-.hero__title {
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  color: white;
-  padding-left: 1.5rem;
+@media screen and (min-width: 768px) {
+  .navbar__subheader a {
+    padding: 0;
+  }
 }
 
 .hero {
@@ -110,6 +124,7 @@ body {
   align-items: center;
   color: white;
   padding-left: 1.5rem;
+  font-weight: 500;
 }
 
 .musicians {
@@ -119,15 +134,20 @@ body {
   color: #323232;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: "AvenirNext";
 }
 .musicians__img img {
   width: 100%;
 }
-.musicians__caption .text {
+.musicians__caption .text-bold {
   padding-top: 1rem;
+  font-weight: 600;
+  font-family: "AvenirNext";
 }
+.musicians__text .intro,
 .musicians__text .text {
-  padding-top: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
 .gallery {
@@ -148,30 +168,42 @@ body {
   margin-top: 1rem;
 }
 
-footer {
-  background-color: #323232;
-  height: 80vh;
-}
-
 .footer {
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 0 0 0;
   color: white;
   background-color: #323232;
   height: 100%;
+  padding: 1rem;
 }
-.footer__container .footer__header h3 {
+.footer__header h3 {
+  padding-top: 1rem;
   font-size: 2rem;
 }
-.footer__container .footer__icons {
+.footer__icons {
   width: 55%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 2rem 0;
 }
-.footer__container .footer__icons .icon {
+.footer__icons .icon {
   width: 2rem;
 }
-.footer__container .footer__icons .icon-f {
+.footer__icons .icon-f {
   width: 1.2rem;
+}
+.footer__address {
+  padding-top: 1rem;
+}
+.footer__copywrite {
+  font-size: 0.7rem;
+  padding-top: 1rem;
+}
+.footer__subheader {
+  font-family: "AvenirNext";
+  font-weight: 600;
+  padding: 1rem 0 1rem 0;
+}
+.footer__logo {
+  padding-top: 3rem;
 }/*# sourceMappingURL=bio.css.map */

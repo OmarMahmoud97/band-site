@@ -4,27 +4,43 @@
 @use "./fonts" as *;
 
 .footer {
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 0 0 0;
   color: white;
   background-color: #323232;
   height: 100%;
-  &__container {
-    .footer__header {
-      h3 {
-        font-size: 2rem;
-      }
+  padding: 1rem;
+
+  &__header {
+    h3 {
+      padding-top: 1rem;
+      font-size: 2rem;
     }
-    .footer__icons {
-      width: 55%;
-      @include flex-center;
-      justify-content: space-between;
-      padding: 1rem 0 1rem 0;
-      .icon {
-        width: 2rem;
-      }
-      .icon-f {
-        width: 1.2rem;
-      }
+  }
+  &__icons {
+    width: 55%;
+    @include flex-center;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+    .icon {
+      width: 2rem;
     }
+    .icon-f {
+      width: 1.2rem;
+    }
+  }
+  &__address {
+    padding-top: 1rem;
+  }
+  &__copywrite {
+    font-size: 0.7rem;
+    padding-top: 1rem;
+  }
+  &__subheader {
+    font-family: "AvenirNext";
+    font-weight: 600;
+    padding: 1rem 0 1rem 0;
+  }
+  &__logo {
+    padding-top: 3rem;
   }
 }
