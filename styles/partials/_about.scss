@@ -1,16 +1,22 @@
 @use "./variables" as *;
 @use "./resets" as *;
 @use "./fonts" as *;
+@use "./mixin" as *;
 
 .musicians {
   margin: 1rem;
+  @include media-tablet {
+    padding: 2rem;
+  }
+
   &__header {
-    h2 {
-      color: $primarycolor;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-family: "AvenirNext";
+    color: $primarycolor;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "AvenirNext";
+    font-weight: 600;
+    @include media-tablet {
+      font-size: 2.5rem;
     }
   }
 
@@ -27,12 +33,29 @@
       font-family: "AvenirNext";
     }
   }
+  .text-bryan {
+    @include media-tablet {
+      padding-top: 1rem;
+    }
+  }
+  .intro {
+    @include media-tablet {
+      padding: 1rem;
+    }
+  }
 
   &__text {
-    .intro,
-    .text {
-      padding: 1rem 0 1rem 0;
+    @include media-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+  }
+}
+
+.text-box {
+  @include media-tablet {
+    width: 45%;
   }
 }
 
@@ -52,6 +75,10 @@
     .img {
       width: 100%;
       margin-top: 1rem;
+      @include media-tablet {
+        justify-content: space-between;
+        width: 30%;
+      }
     }
   }
 }

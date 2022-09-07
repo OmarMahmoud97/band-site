@@ -16,5 +16,10 @@
     color: $primarycolor3;
     padding-left: 1.5rem;
     font-weight: 500;
+    @include media-tablet {
+      font-size: 3rem;
+      font-family: "AvenirNext";
+      font-weight: 600;
+    }
   }
 }

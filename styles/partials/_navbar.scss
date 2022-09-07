@@ -11,15 +11,27 @@
   flex-wrap: wrap;
   background-color: $primarycolor;
   @include media-tablet {
-    display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  &__container {
+    @include media-tablet {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+    }
   }
 
   &__header {
     width: 100vw;
     text-align: center;
     color: $primarycolor3;
+    @include media-tablet {
+      width: fit-content;
+      padding-left: 2rem;
+      padding-top: 1rem;
+    }
   }
   &__logo {
     width: 8.5rem;
@@ -30,7 +42,7 @@
     color: $primarycolor3;
     list-style: none;
     @include media-tablet {
-      width: 25%;
+      width: 40vw;
     }
   }
 
@@ -39,8 +51,10 @@
     width: 50%;
     text-align: center;
     color: $primarycolor3;
+
     @include media-tablet {
       width: 25%;
+      padding: 1rem 0 1rem 0;
     }
 
     a {
@@ -72,6 +86,7 @@
       padding: 1rem 0 0 0;
       @include media-tablet {
         padding: 0;
+        width: 25%;
       }
     }
   }
