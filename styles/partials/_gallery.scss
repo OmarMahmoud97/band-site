@@ -3,6 +3,7 @@
 @use "./fonts" as *;
 
 .gallery {
+  background-color: $primarycolor2;
   margin: 1rem;
 
   &__title {

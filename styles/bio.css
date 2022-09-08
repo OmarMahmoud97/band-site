@@ -124,7 +124,7 @@ body {
 @media screen and (min-width: 768px) {
   .navbar__subheader a {
     padding: 0;
-    width: 25%;
+    width: 15%;
   }
 }
 
@@ -135,6 +135,11 @@ body {
   height: 30vh;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
 }
 .hero__title {
   font-size: 1.5rem;
@@ -210,6 +215,11 @@ body {
 .gallery__title h2 {
   font-size: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    padding-left: 1rem;
+  }
+}
 .gallery__container {
   width: 100%;
   display: flex;
@@ -217,13 +227,17 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    justify-content: space-evenly;
+  }
+}
 .gallery__container .img {
   width: 100%;
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery__container .img {
-    justify-content: space-between;
     width: 30%;
   }
 }
@@ -235,29 +249,80 @@ body {
   height: 100%;
   padding: 1rem;
 }
-.footer__header h3 {
-  padding-top: 1rem;
-  font-size: 2rem;
+@media screen and (min-width: 768px) {
+  .footer__header-box {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__header-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+}
+.footer__header {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__header {
+    width: 100%;
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
 }
 .footer__icons {
-  width: 55%;
   display: flex;
   align-items: center;
+  width: 55%;
   justify-content: space-between;
   padding: 1rem 0 2rem 0;
 }
-.footer__icons .icon {
+@media screen and (min-width: 768px) {
+  .footer__icons {
+    padding: 1rem 0 1rem 0;
+    width: 40%;
+  }
+}
+.footer__icons .icon--padding {
   width: 2rem;
 }
 .footer__icons .icon-f {
-  width: 1.2rem;
+  height: 1.5rem;
 }
-.footer__address {
+.footer__ .footer__address {
   padding-top: 1rem;
 }
 .footer__copywrite {
   font-size: 0.7rem;
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.footer__pearl {
+  padding: 1rem 0 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__container2 {
+    width: 33%;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container3 {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container1 {
+    padding: 1rem;
+  }
 }
 .footer__subheader {
   font-family: "AvenirNext";
@@ -266,4 +331,17 @@ body {
 }
 .footer__logo {
   padding-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
+}
+.footer__logo-tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-tablet {
+    display: contents;
+  }
 }/*# sourceMappingURL=bio.css.map */

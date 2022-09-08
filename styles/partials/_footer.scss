@@ -9,38 +9,106 @@
   background-color: #323232;
   height: 100%;
   padding: 1rem;
+  &__header-box {
+    @include media-tablet {
+      width: 30%;
+    }
+  }
+
+  &__header-container {
+    @include media-tablet {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+    }
+  }
 
   &__header {
-    h3 {
+    font-size: 1.5rem;
+
+    @include media-tablet {
+      width: 100%;
       padding-top: 1rem;
       font-size: 2rem;
     }
   }
+
   &__icons {
-    width: 55%;
     @include flex-center;
+    width: 55%;
     justify-content: space-between;
     padding: 1rem 0 2rem 0;
-    .icon {
+
+    @include media-tablet {
+      padding: 1rem 0 1rem 0;
+      width: 40%;
+    }
+    .icon--padding {
       width: 2rem;
     }
     .icon-f {
-      width: 1.2rem;
+      height: 1.5rem;
     }
   }
-  &__address {
+
+  &__ &__address {
     padding-top: 1rem;
   }
+
   &__copywrite {
     font-size: 0.7rem;
     padding-top: 1rem;
   }
+
+  &__box {
+    @include media-tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__pearl {
+    padding: 1rem 0 1rem 0;
+  }
+
+  &__container2 {
+    @include media-tablet {
+      width: 33%;
+      padding: 1rem;
+    }
+  }
+
+  &__container3 {
+    @include media-tablet {
+      padding: 1rem;
+    }
+  }
+
+  &__container1 {
+    @include media-tablet {
+      padding: 1rem;
+    }
+  }
+
   &__subheader {
     font-family: "AvenirNext";
     font-weight: 600;
     padding: 1rem 0 1rem 0;
   }
+
   &__logo {
     padding-top: 3rem;
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__logo-tablet {
+    display: none;
+    @include media-tablet {
+      display: contents;
+    }
   }
 }
