@@ -15,11 +15,22 @@
     justify-content: flex-start;
     padding: 0;
   }
+  @include media-desktop {
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+  }
+
   &__container {
     @include media-tablet {
       display: flex;
       align-items: flex-start;
       justify-content: space-evenly;
+    }
+
+    @include media-desktop {
+      width: 63.75rem;
+      justify-content: flex-start;
     }
   }
 
@@ -32,10 +43,15 @@
       padding-left: 2rem;
       padding-top: 1rem;
     }
+    @include media-desktop {
+      padding-top: 1.7rem;
+    }
   }
+
   &__logo {
     width: 8.5rem;
   }
+
   &__subheader-container {
     width: 100%;
     @include flex-evenly;
@@ -43,6 +59,10 @@
     list-style: none;
     @include media-tablet {
       width: 40vw;
+    }
+    @include media-desktop {
+      width: 20vw;
+      height: 5rem;
     }
   }
 
@@ -56,8 +76,12 @@
       width: 25%;
       padding: 1rem 0 1rem 0;
     }
+    @include media-desktop {
+      height: 100%;
+      padding-top: 2rem;
+    }
 
-    a {
+    .biography {
       color: $primarycolor3;
       text-decoration: none;
       width: 100%;
@@ -68,16 +92,15 @@
         padding: 0;
       }
     }
-
-    h2 {
-      padding-bottom: 1rem;
-    }
   }
+
   &__subheader {
     width: 50%;
     text-align: center;
-    a {
-      color: $primarycolor3;
+    @include media-desktop {
+      width: fit-content;
+    }
+    .shows {
       color: $primarycolor3;
       text-decoration: none;
       width: 100%;
@@ -87,6 +110,9 @@
       @include media-tablet {
         padding: 0;
         width: 15%;
+      }
+      @include media-desktop {
+        width: fit-content;
       }
     }
   }

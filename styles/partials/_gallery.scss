@@ -1,18 +1,38 @@
 @use "./variables" as *;
 @use "./resets" as *;
 @use "./fonts" as *;
+@use "./mixin" as *;
 
 .gallery {
   background-color: $primarycolor2;
   margin: 1rem;
-
   &__title {
-    font-size: 2rem;
+    h2 {
+      font-size: 2rem;
+    }
+    @include media-tablet {
+      padding-left: 1rem;
+    }
   }
   &__container {
     width: 100%;
-    @include flex-center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: $primarycolor2;
+    @include media-tablet {
+      justify-content: space-evenly;
+    }
+    @include media-desktop {
+      width: 63.75rem;
+    }
+    .img {
+      width: 100%;
+      margin-top: 1rem;
+      @include media-tablet {
+        width: 30%;
+      }
+    }
   }
 }

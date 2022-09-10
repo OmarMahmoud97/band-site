@@ -8,9 +8,25 @@
   background-position: center;
   background-size: cover;
   height: 30vh;
+  opacity: 70%;
+
   @include flex-center;
   @include media-tablet {
     height: 40vh;
+  }
+  @include media-desktop {
+    height: 80vh;
+    justify-content: center;
+  }
+
+  &__section {
+    @include media-desktop {
+      width: 63.75rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   &__title {
@@ -20,6 +36,7 @@
     color: $primarycolor3;
     padding-left: 1.5rem;
     font-weight: 500;
+    z-index: 3;
     @include media-tablet {
       font-size: 3rem;
       font-family: "AvenirNext";

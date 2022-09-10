@@ -48,3 +48,21 @@
     @content;
   }
 }
+
+@mixin font-normal {
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: "AvenirNext";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-bolder {
+  font-family: "AvenirNext";
+  font-weight: 700;
+  font-style: normal;
+}
