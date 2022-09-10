@@ -5,20 +5,20 @@
 
 .musicians {
   margin: 1rem;
+
   @include media-tablet {
     padding: 2rem;
   }
+
   @include media-desktop {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-direction: column;
   }
 
   &__container {
     @include media-desktop {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: center;
       flex-direction: column;
       width: 63.75rem;
@@ -31,31 +31,36 @@
     margin-bottom: 1rem;
     font-family: "AvenirNext";
     font-weight: 600;
-    padding: 2rem 0 0 4rem;
+    padding: 2rem 0 0 1rem;
+    width: 100%;
     @include media-tablet {
       font-size: 2.5rem;
     }
+
     @include media-desktop {
       width: 63.75rem;
-      padding-left: 0;
+      padding-left: 1rem;
       margin-right: 12rem;
+      font-size: 3rem;
     }
   }
 
   &__img {
     @include media-desktop {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: center;
       width: 100%;
     }
+
     .band {
       width: 100%;
+
       @include media-desktop {
         min-width: 70%;
       }
     }
   }
+
   &__caption-wrapper {
     @include media-desktop {
       display: flex;
@@ -68,24 +73,36 @@
     @include media-desktop {
       width: 90%;
     }
+
     .text-bold {
       padding-top: 1rem;
-      font-weight: 600;
-      font-family: "AvenirNext";
+      @include font-bolder;
+      @include media-desktop {
+        font-size: 1.5rem;
+      }
     }
   }
+
   .text-bryan {
     padding-top: 1rem;
-    font-weight: 600;
+    font-weight: 400;
+
+    @include media-desktop {
+      font-size: 1.2rem;
+    }
   }
+
   .intro {
     padding: 1rem 0 2rem 0;
+    @include font-bolder;
+    @include media-desktop {
+      font-size: 1.5rem;
+    }
   }
 
   &__text {
     @include media-tablet {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: space-between;
     }
   }
@@ -95,41 +112,13 @@
   @include media-tablet {
     width: 47%;
   }
+  @include media-desktop {
+    font-size: 1.2rem;
+  }
 }
 
-.gallery {
-  margin: 1rem;
-  &__title {
-    h2 {
-      font-size: 2rem;
-    }
-    @include media-tablet {
-      padding-left: 1rem;
-    }
-  }
-  &__container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    @include media-tablet {
-      justify-content: space-evenly;
-    }
-    .img {
-      width: 100%;
-      margin-top: 1rem;
-      @include media-tablet {
-        width: 30%;
-      }
-    }
-  }
-}
 .about-header {
-  @include media-desktop {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: 100%;
+  @include flex-center;
+  justify-content: center;
 }

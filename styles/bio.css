@@ -61,6 +61,7 @@ body {
   .navbar__container {
     width: 63.75rem;
     justify-content: flex-start;
+    margin-right: 12rem;
   }
 }
 .navbar__header {
@@ -173,7 +174,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 30vh;
-  opacity: 70%;
+  opacity: 90%;
   display: flex;
   align-items: center;
 }
@@ -195,22 +196,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-right: 12rem;
   }
 }
 .hero__title {
+  font-family: "AvenirNext";
+  font-weight: 600;
+  font-style: normal;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   color: white;
   padding-left: 1.5rem;
-  font-weight: 500;
-  z-index: 3;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 3rem;
-    font-family: "AvenirNext";
-    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 6rem;
   }
 }
 
@@ -245,7 +251,8 @@ body {
   margin-bottom: 1rem;
   font-family: "AvenirNext";
   font-weight: 600;
-  padding: 2rem 0 0 4rem;
+  padding: 2rem 0 0 1rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .musicians__header {
@@ -255,8 +262,9 @@ body {
 @media screen and (min-width: 1280px) {
   .musicians__header {
     width: 63.75rem;
-    padding-left: 0;
+    padding-left: 1rem;
     margin-right: 12rem;
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -289,15 +297,34 @@ body {
 }
 .musicians__caption .text-bold {
   padding-top: 1rem;
-  font-weight: 600;
   font-family: "AvenirNext";
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (min-width: 1280px) {
+  .musicians__caption .text-bold {
+    font-size: 1.5rem;
+  }
 }
 .musicians .text-bryan {
   padding-top: 1rem;
-  font-weight: 600;
+  font-weight: 400;
+}
+@media screen and (min-width: 1280px) {
+  .musicians .text-bryan {
+    font-size: 1.2rem;
+  }
 }
 .musicians .intro {
   padding: 1rem 0 2rem 0;
+  font-family: "AvenirNext";
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (min-width: 1280px) {
+  .musicians .intro {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .musicians__text {
@@ -312,70 +339,32 @@ body {
     width: 47%;
   }
 }
-
-.gallery {
-  margin: 1rem;
-}
-.gallery__title h2 {
-  font-size: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .gallery__title {
-    padding-left: 1rem;
+@media screen and (min-width: 1280px) {
+  .text-box {
+    font-size: 1.2rem;
   }
 }
-.gallery__container {
+
+.about-header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .gallery__container {
-    justify-content: space-evenly;
-  }
-}
-.gallery__container .img {
-  width: 100%;
-  margin-top: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .gallery__container .img {
-    width: 30%;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .about-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .footer {
-  margin: 1rem 0 0 0;
   color: white;
   background-color: #323232;
   padding: 1rem;
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding-left: 2rem;
-    margin: 2rem 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__header-box {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 1280px) {
   .footer__header-box {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -415,16 +404,15 @@ body {
   display: flex;
   align-items: center;
   width: 55%;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem 0 2rem 0;
 }
 @media screen and (min-width: 768px) {
   .footer__icons {
     padding: 1rem 0 1rem 0;
-    width: 40%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .footer__icons {
     justify-content: space-evenly;
     width: 20%;
@@ -435,6 +423,7 @@ body {
 }
 .footer__icons .icon-f {
   height: 1.5rem;
+  padding: 0 2rem;
 }
 .footer__address {
   padding-top: 1rem;
@@ -444,15 +433,19 @@ body {
     padding: 1rem 0;
   }
 }
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 .footer__copywrite {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer__box {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
   }
 }
@@ -477,7 +470,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__container2 {
-    width: 20%;
+    width: 22%;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -488,18 +482,18 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__container3 {
-    width: 20%;
+    width: 22%;
   }
 }
 @media screen and (min-width: 768px) {
   .footer__container1 {
     padding: 1rem;
-    width: 33%;
+    width: 22%;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__container1 {
-    width: 20%;
+    width: 22%;
   }
 }
 .footer__subheader {
@@ -525,12 +519,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__logo-tablet {
-    width: 50%;
-    display: contents;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__logo-tablet {
     width: 30%;
     display: flex;
     align-items: center;
@@ -540,5 +528,65 @@ body {
 @media screen and (min-width: 768px) {
   .footer__text .text-uk {
     padding: 1rem 0;
+  }
+}
+
+.gallery {
+  background-color: #e1e1e1;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    margin: 0;
+  }
+}
+.gallery__title h2 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .gallery__title h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.gallery__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #e1e1e1;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__container {
+    width: 90%;
+  }
+}
+.gallery__container .img {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #afafaf;
+}
+@media screen and (min-width: 768px) {
+  .gallery__container .img {
+    width: 30%;
+    margin-top: 1.5rem;
   }
 }/*# sourceMappingURL=bio.css.map */

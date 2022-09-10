@@ -4,34 +4,51 @@
 @use "./mixin" as *;
 
 .gallery {
-  background-color: $primarycolor2;
-  margin: 1rem;
+  background-color: $secondarycolor2;
+  padding: 2rem 1rem;
+  @include media-desktop {
+    margin: 0;
+  }
   &__title {
     h2 {
       font-size: 2rem;
+      @include media-desktop {
+        font-size: 3rem;
+      }
     }
     @include media-tablet {
       padding-left: 1rem;
     }
   }
+
+  &__wrapper {
+    @include media-desktop {
+      @include flex-center;
+      justify-content: center;
+    }
+  }
+
   &__container {
     width: 100%;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: $primarycolor2;
+    background-color: $secondarycolor2;
+    padding-bottom: 4rem;
     @include media-tablet {
       justify-content: space-evenly;
     }
     @include media-desktop {
-      width: 63.75rem;
+      width: 90%;
     }
     .img {
       width: 100%;
       margin-top: 1rem;
+      background-color: $primarycolor2;
+
       @include media-tablet {
         width: 30%;
+        margin-top: 1.5rem;
       }
     }
   }

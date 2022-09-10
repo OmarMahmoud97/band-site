@@ -8,7 +8,7 @@
   background-position: center;
   background-size: cover;
   height: 30vh;
-  opacity: 70%;
+  opacity: 90%;
 
   @include flex-center;
   @include media-tablet {
@@ -23,24 +23,23 @@
     @include media-desktop {
       width: 63.75rem;
       height: 100%;
-      display: flex;
-      align-items: center;
+      @include flex-center;
       justify-content: flex-start;
+      margin-right: 12rem;
     }
   }
 
   &__title {
+    @include font-bold;
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     color: $primarycolor3;
     padding-left: 1.5rem;
-    font-weight: 500;
-    z-index: 3;
     @include media-tablet {
       font-size: 3rem;
-      font-family: "AvenirNext";
-      font-weight: 600;
+    }
+    @include media-desktop {
+      font-size: 6rem;
     }
   }
 }
