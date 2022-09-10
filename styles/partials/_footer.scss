@@ -52,11 +52,13 @@
 
     @include media-tablet {
       padding: 1rem 0 1rem 0;
-    }
-
-    @include media-tablet {
       justify-content: space-evenly;
       width: 20%;
+    }
+
+    @include media-desktop {
+      padding-top: 1rem;
+      padding-bottom: 0;
     }
 
     .icon--padding {
@@ -74,7 +76,7 @@
 
     .address {
       @include media-tablet {
-        padding: 1rem 0;
+        padding-bottom: 1rem;
       }
     }
   }
@@ -96,6 +98,7 @@
     }
     @include media-desktop {
       justify-content: flex-start;
+      width: 63.75rem;
     }
   }
 
@@ -114,7 +117,7 @@
     }
 
     @include media-desktop {
-      width: 22%;
+      width: 25%;
       padding: 0;
     }
   }
@@ -126,24 +129,23 @@
     }
 
     @include media-desktop {
-      width: 22%;
+      width: 25%;
     }
   }
 
   &__container1 {
     @include media-tablet {
-      padding: 1rem;
+      padding: 1rem 1rem 1rem 0;
       width: 22%;
     }
 
     @include media-desktop {
-      width: 22%;
+      width: 25%;
     }
   }
 
   &__subheader {
-    font-family: "AvenirNext";
-    font-weight: 600;
+    @include font-bold;
     padding: 1rem 0 1rem 0;
   }
 
@@ -166,6 +168,7 @@
       width: 30%;
       @include flex-center;
       justify-content: flex-end;
+      width: 60%;
     }
   }
 
@@ -175,5 +178,11 @@
         padding: 1rem 0;
       }
     }
+  }
+  .info,
+  .carson,
+  .pearl {
+    text-decoration: none;
+    color: $primarycolor3;
   }
 }

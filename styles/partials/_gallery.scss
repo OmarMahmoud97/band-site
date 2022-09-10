@@ -4,7 +4,7 @@
 @use "./mixin" as *;
 
 .gallery {
-  background-color: $secondarycolor2;
+  background-color: $secondarycolor3;
   padding: 2rem 1rem;
   @include media-desktop {
     margin: 0;
@@ -33,18 +33,18 @@
     @include flex-center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: $secondarycolor2;
+    background-color: $secondarycolor3;
     padding-bottom: 4rem;
     @include media-tablet {
       justify-content: space-evenly;
     }
     @include media-desktop {
-      width: 90%;
+      width: 92%;
     }
     .img {
       width: 100%;
       margin-top: 1rem;
-      background-color: $primarycolor2;
+      background-color: $secondarycolor3;
 
       @include media-tablet {
         width: 30%;
