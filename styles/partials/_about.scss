@@ -3,9 +3,13 @@
 @use "./fonts" as *;
 @use "./mixin" as *;
 
-.musicians {
-  margin: 1rem;
+.about-header {
+  width: 100%;
+  @include flex-center;
+  justify-content: center;
+}
 
+.musicians {
   @include media-tablet {
     padding: 2rem;
   }
@@ -28,10 +32,8 @@
   &__header {
     color: $primarycolor;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: "AvenirNext";
-    font-weight: 600;
-    padding: 2rem 0 0 1rem;
+    @include font-bold;
+    padding: 2.5rem 0 0.5rem 1rem;
     width: 100%;
     @include media-tablet {
       font-size: 2.5rem;
@@ -71,7 +73,7 @@
 
   &__caption {
     @include media-desktop {
-      width: 90%;
+      width: 70%;
     }
 
     .text-bold {
@@ -85,10 +87,11 @@
 
   .text-bryan {
     padding-top: 1rem;
-    font-weight: 400;
+    font-weight: 500;
 
     @include media-desktop {
       font-size: 1.2rem;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -102,24 +105,16 @@
 
   &__text {
     @include media-tablet {
-      @include flex-center;
-      justify-content: space-between;
+      @include flex-between;
+    }
+    .text-box {
+      padding-bottom: 1rem;
+      @include media-tablet {
+        width: 48%;
+      }
+      @include media-desktop {
+        font-size: 1.2rem;
+      }
     }
   }
-}
-
-.text-box {
-  padding-bottom: 1rem;
-  @include media-tablet {
-    width: 48%;
-  }
-  @include media-desktop {
-    font-size: 1.2rem;
-  }
-}
-
-.about-header {
-  width: 100%;
-  @include flex-center;
-  justify-content: center;
 }

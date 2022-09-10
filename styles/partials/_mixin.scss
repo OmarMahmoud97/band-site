@@ -16,12 +16,6 @@
   @include flex-center;
 }
 
-@mixin card {
-  @include flex-around;
-  background-size: cover;
-  background-position: center;
-}
-
 @mixin flex-between {
   @include flex-center;
   justify-content: space-between;
@@ -32,10 +26,7 @@
   justify-content: space-evenly;
 }
 
-@mixin display-center {
-  display: flex;
-  align-items: center;
-}
+// media queries
 
 @mixin media-tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -48,6 +39,8 @@
     @content;
   }
 }
+
+// typography
 
 @mixin font-normal {
   font-family: "AvenirNext";

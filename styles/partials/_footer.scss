@@ -27,7 +27,7 @@
     }
 
     @include media-desktop {
-      width: 63.75rem;
+      width: 70.75rem;
     }
   }
 
@@ -38,6 +38,7 @@
       width: 100%;
       padding-top: 1rem;
       font-size: 2rem;
+      padding-right: 1rem;
     }
     @include media-desktop {
       width: fit-content;
@@ -48,17 +49,12 @@
     @include flex-center;
     width: 55%;
     justify-content: flex-start;
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
 
     @include media-tablet {
-      padding: 1rem 0 1rem 0;
+      padding-top: 1.5rem;
       justify-content: space-evenly;
       width: 20%;
-    }
-
-    @include media-desktop {
-      padding-top: 1rem;
-      padding-bottom: 0;
     }
 
     .icon--padding {
@@ -135,7 +131,7 @@
 
   &__container1 {
     @include media-tablet {
-      padding: 1rem 1rem 1rem 0;
+      padding: 1rem 1rem 1rem;
       width: 22%;
     }
 
@@ -165,9 +161,11 @@
     display: none;
 
     @include media-tablet {
-      width: 30%;
+      width: 50%;
       @include flex-center;
       justify-content: flex-end;
+    }
+    @include media-desktop {
       width: 60%;
     }
   }

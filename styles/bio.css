@@ -234,9 +234,13 @@ body {
   }
 }
 
-.musicians {
-  margin: 1rem;
+.about-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 @media screen and (min-width: 768px) {
   .musicians {
     padding: 2rem;
@@ -262,10 +266,10 @@ body {
 .musicians__header {
   color: #323232;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
   font-family: "AvenirNext";
   font-weight: 600;
-  padding: 2rem 0 0 1rem;
+  font-style: normal;
+  padding: 2.5rem 0 0.5rem 1rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -306,7 +310,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .musicians__caption {
-    width: 90%;
+    width: 70%;
   }
 }
 .musicians__caption .text-bold {
@@ -322,11 +326,12 @@ body {
 }
 .musicians .text-bryan {
   padding-top: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 @media screen and (min-width: 1280px) {
   .musicians .text-bryan {
     font-size: 1.2rem;
+    padding-bottom: 1.5rem;
   }
 }
 .musicians .intro {
@@ -347,26 +352,18 @@ body {
     justify-content: space-between;
   }
 }
-
-.text-box {
+.musicians__text .text-box {
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .text-box {
+  .musicians__text .text-box {
     width: 48%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .text-box {
+  .musicians__text .text-box {
     font-size: 1.2rem;
   }
-}
-
-.about-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer {
@@ -397,7 +394,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__header-container {
-    width: 63.75rem;
+    width: 70.75rem;
   }
 }
 .footer__header {
@@ -408,6 +405,7 @@ body {
     width: 100%;
     padding-top: 1rem;
     font-size: 2rem;
+    padding-right: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -422,19 +420,13 @@ body {
   align-items: center;
   width: 55%;
   justify-content: flex-start;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .footer__icons {
-    padding: 1rem 0 1rem 0;
+    padding-top: 1.5rem;
     justify-content: space-evenly;
     width: 20%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__icons {
-    padding-top: 1rem;
-    padding-bottom: 0;
   }
 }
 .footer__icons .icon--padding {
@@ -507,7 +499,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__container1 {
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 1rem 1rem;
     width: 22%;
   }
 }
@@ -540,10 +532,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__logo-tablet {
-    width: 30%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo-tablet {
     width: 60%;
   }
 }
@@ -595,7 +591,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background-color: #fafafa;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery__container {

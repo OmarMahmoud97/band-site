@@ -9,13 +9,16 @@
   @include media-desktop {
     margin: 0;
   }
+
   &__title {
     h2 {
       font-size: 2rem;
+
       @include media-desktop {
         font-size: 3rem;
       }
     }
+
     @include media-tablet {
       padding-left: 1rem;
     }
@@ -34,13 +37,16 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: $secondarycolor3;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
+
     @include media-tablet {
       justify-content: space-evenly;
     }
+
     @include media-desktop {
       width: 92%;
     }
+
     .img {
       width: 100%;
       margin-top: 1rem;
