@@ -7,19 +7,18 @@
   background-image: url(/assets/Images/hero-shows.jpg);
   @include hero;
   @include flex-center;
+  justify-content: space-around;
 }
 .hero {
   background-image: url(/assets/Images/hero-bio.jpg);
   @include hero;
   @include flex-center;
-
   &__section {
+    flex-wrap: wrap;
     @include media-desktop {
       width: 63.75rem;
-      height: 100%;
       @include flex-center;
       justify-content: flex-start;
-      margin-right: 12rem;
     }
   }
 
@@ -36,7 +35,7 @@
     }
 
     @include media-desktop {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   }
 
@@ -45,5 +44,9 @@
     @include flex-center;
     width: 85%;
     padding: 0 0 1.5rem 1.5rem;
+    @include media-desktop {
+      font-size: 1.5rem;
+      @include font-bold;
+    }
   }
 }

@@ -16,5 +16,16 @@
       @include font-bolder;
       font-size: 1.5rem;
     }
+    @include media-tablet {
+      padding: 2rem 0 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .head {
+        font-size: 2.5rem;
+        width: 63.75rem;
+      }
+    }
   }
 }

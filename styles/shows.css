@@ -61,7 +61,6 @@ body {
   .navbar__container {
     width: 63.75rem;
     justify-content: flex-start;
-    margin-right: 12rem;
   }
 }
 .navbar__header {
@@ -196,7 +195,9 @@ body {
   .navbar__subheader:hover {
     border-bottom: 0.3rem white solid;
     text-align: center;
-    width: 15%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 100%;
     padding-top: 2rem;
     font-weight: bolder;
@@ -211,6 +212,7 @@ body {
   opacity: 90%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 @media screen and (min-width: 768px) {
   .media {
@@ -220,7 +222,6 @@ body {
 @media screen and (min-width: 1280px) {
   .media {
     height: 80vh;
-    justify-content: center;
   }
 }
 
@@ -241,17 +242,17 @@ body {
 @media screen and (min-width: 1280px) {
   .hero {
     height: 80vh;
-    justify-content: center;
   }
+}
+.hero__section {
+  flex-wrap: wrap;
 }
 @media screen and (min-width: 1280px) {
   .hero__section {
     width: 63.75rem;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 12rem;
   }
 }
 .hero__title {
@@ -272,7 +273,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 .hero__subheader {
@@ -281,6 +282,14 @@ body {
   align-items: center;
   width: 85%;
   padding: 0 0 1.5rem 1.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .hero__subheader {
+    font-size: 1.5rem;
+    font-family: "AvenirNext";
+    font-weight: 600;
+    font-style: normal;
+  }
 }
 
 .footer {
@@ -491,4 +500,16 @@ body {
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .tickets__header {
+    padding: 2rem 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tickets__header .head {
+    font-size: 2.5rem;
+    width: 63.75rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

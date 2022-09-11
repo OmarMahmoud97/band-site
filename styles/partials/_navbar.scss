@@ -33,7 +33,6 @@
     @include media-desktop {
       width: 63.75rem;
       justify-content: flex-start;
-      margin-right: 12rem;
     }
   }
 
@@ -155,7 +154,7 @@
     &__subheader:hover {
       border-bottom: 0.3rem $primarycolor3 solid;
       text-align: center;
-      width: 15%;
+      width: fit-content;
       height: 100%;
       padding-top: 2rem;
       font-weight: bolder;
