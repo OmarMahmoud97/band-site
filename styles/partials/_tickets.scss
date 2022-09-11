@@ -1,0 +1,20 @@
+@use "./variables" as *;
+@use "./resets" as *;
+@use "./fonts" as *;
+@use "./mixin" as *;
+
+.tickets {
+  height: 70vh;
+
+  &__header {
+    display: flex;
+    height: 15%;
+    align-items: center;
+    padding-left: 1.5rem;
+
+    .head {
+      @include font-bolder;
+      font-size: 1.5rem;
+    }
+  }
+}

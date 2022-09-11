@@ -283,138 +283,6 @@ body {
   padding: 0 0 1.5rem 1.5rem;
 }
 
-.about-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-  .musicians {
-    padding: 2rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 63.75rem;
-  }
-}
-.musicians__header {
-  color: #323232;
-  font-size: 1.5rem;
-  font-family: "AvenirNext";
-  font-weight: 600;
-  font-style: normal;
-  padding: 2.5rem 0 0.5rem 1rem;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .musicians__header {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__header {
-    width: 63.75rem;
-    padding-left: 1rem;
-    margin-right: 12rem;
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-}
-.musicians__img .band {
-  width: 100%;
-}
-@media screen and (min-width: 1280px) {
-  .musicians__img .band {
-    min-width: 70%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__caption-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__caption {
-    width: 70%;
-  }
-}
-.musicians__caption .text-bold {
-  padding-top: 1rem;
-  font-family: "AvenirNext";
-  font-weight: 700;
-  font-style: normal;
-}
-@media screen and (min-width: 1280px) {
-  .musicians__caption .text-bold {
-    font-size: 1.5rem;
-  }
-}
-.musicians .text-bryan {
-  padding-top: 1rem;
-  font-weight: 500;
-}
-@media screen and (min-width: 1280px) {
-  .musicians .text-bryan {
-    font-size: 1.2rem;
-    padding-bottom: 1.5rem;
-  }
-}
-.musicians .intro {
-  padding: 1rem 0 2rem 0;
-  font-family: "AvenirNext";
-  font-weight: 700;
-  font-style: normal;
-}
-@media screen and (min-width: 1280px) {
-  .musicians .intro {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .musicians__text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-.musicians__text .text-box {
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .musicians__text .text-box {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .musicians__text .text-box {
-    font-size: 1.2rem;
-  }
-}
-
 .footer {
   color: white;
   background-color: #323232;
@@ -609,71 +477,18 @@ body {
   }
 }
 
-.gallery {
-  background-color: #fafafa;
-  padding: 2rem 1rem;
+.tickets {
+  height: 70vh;
 }
-@media screen and (min-width: 1280px) {
-  .gallery {
-    margin: 0;
-  }
-}
-.gallery__title h2 {
-  font-size: 2rem;
-}
-@media screen and (min-width: 1280px) {
-  .gallery__title h2 {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .gallery__title {
-    padding-left: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.gallery__container {
-  width: 100%;
+.tickets__header {
   display: flex;
+  height: 15%;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: #fafafa;
-  padding-bottom: 1rem;
+  padding-left: 1.5rem;
 }
-@media screen and (min-width: 768px) {
-  .gallery__container {
-    justify-content: space-evenly;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__container {
-    width: 92%;
-  }
-}
-.gallery__container .img {
-  width: 100%;
-  margin-top: 1rem;
-  background-color: #fafafa;
-}
-@media screen and (min-width: 768px) {
-  .gallery__container .img {
-    width: 30%;
-    margin-top: 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .gallery__container .img {
-    filter: grayscale(100);
-    transition: 500ms ease;
-  }
-}
-.gallery__container .img:hover {
-  filter: grayscale(0);
-}/*# sourceMappingURL=bio.css.map */
+.tickets__header .head {
+  font-family: "AvenirNext";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=shows.css.map */

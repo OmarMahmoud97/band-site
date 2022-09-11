@@ -101,7 +101,8 @@
       transition: 500ms ease;
     }
 
-    .biography {
+    .biography,
+    .shows {
       color: $primarycolor3;
       text-decoration: none;
       width: 100%;
@@ -129,7 +130,8 @@
       padding-top: 2rem;
     }
 
-    .shows {
+    .shows,
+    .biography {
       color: $primarycolor3;
       text-decoration: none;
       width: 100%;
