@@ -396,8 +396,12 @@ body {
 .footer__wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+}
+@media screen and (min-width: 1280px) {
+  .footer__wrapper {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer__header-wrapper {
@@ -424,9 +428,8 @@ body {
 @media screen and (min-width: 768px) {
   .footer__header {
     width: 100%;
-    padding-top: 1rem;
+    padding: 1rem 1rem 0 0;
     font-size: 2rem;
-    padding-right: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {

@@ -16,8 +16,10 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    @include media-desktop {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__header-wrapper {
@@ -43,9 +45,8 @@
 
     @include media-tablet {
       width: 100%;
-      padding-top: 1rem;
+      padding: 1rem 1rem 0 0;
       font-size: 2rem;
-      padding-right: 1rem;
     }
     @include media-desktop {
       width: fit-content;
@@ -91,7 +92,6 @@
 
   &__container1 {
     @include media-tablet {
-      // padding: 1rem 1rem 1rem;
       width: 33%;
     }
 
@@ -103,7 +103,6 @@
   &__container2 {
     @include media-tablet {
       width: 33%;
-      // padding: 1rem 1rem 0 1rem;
     }
 
     @include media-desktop {
