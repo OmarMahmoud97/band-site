@@ -86,6 +86,12 @@ body {
 .navbar__logo {
   width: 8.5rem;
   cursor: pointer;
+  transition: 5ms ease;
+}
+@media screen and (min-width: 1280px) {
+  .navbar__logo:hover {
+    scale: 1.2;
+  }
 }
 .navbar__subheader-container {
   width: 100%;
@@ -122,6 +128,7 @@ body {
   .navbar__subheader-active {
     height: 100%;
     padding-top: 2rem;
+    transition: 500ms ease;
   }
 }
 .navbar__subheader-active .biography {
@@ -136,6 +143,9 @@ body {
   .navbar__subheader-active .biography {
     padding: 0;
   }
+}
+.navbar__subheader-active :hover {
+  font-weight: 600;
 }
 .navbar__subheader {
   width: 50%;
@@ -167,6 +177,7 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    transition: 500ms ease;
   }
 }
 .navbar__subheader .shows :hover {
@@ -613,4 +624,13 @@ body {
     width: 30%;
     margin-top: 1.5rem;
   }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__container .img {
+    filter: grayscale(100);
+    transition: 500ms ease;
+  }
+}
+.gallery__container .img:hover {
+  filter: grayscale(0);
 }/*# sourceMappingURL=bio.css.map */

@@ -54,6 +54,12 @@
   &__logo {
     width: 8.5rem;
     cursor: pointer;
+    transition: 5ms ease;
+  }
+  &__logo:hover {
+    @include media-desktop {
+      scale: 1.2;
+    }
   }
 
   &__subheader-container {
@@ -86,6 +92,7 @@
     @include media-desktop {
       height: 100%;
       padding-top: 2rem;
+      transition: 500ms ease;
     }
 
     .biography {
@@ -99,6 +106,9 @@
       @include media-tablet {
         padding: 0;
       }
+    }
+    :hover {
+      font-weight: 600;
     }
   }
 
@@ -124,6 +134,7 @@
 
       @include media-desktop {
         width: fit-content;
+        transition: 500ms ease;
       }
       :hover {
         border-bottom: 0.3rem $primarycolor3 solid;
