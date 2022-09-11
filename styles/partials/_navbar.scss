@@ -10,11 +10,13 @@
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: $primarycolor;
+
   @include media-tablet {
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 0;
   }
+
   @include media-desktop {
     align-items: center;
     justify-content: center;
@@ -54,8 +56,12 @@
   &__logo {
     width: 8.5rem;
     cursor: pointer;
-    transition: 5ms ease;
+    transition: 0.8s ease;
+    @include media-desktop {
+      width: 7rem;
+    }
   }
+
   &__logo:hover {
     @include media-desktop {
       scale: 1.2;
@@ -107,6 +113,7 @@
         padding: 0;
       }
     }
+
     :hover {
       font-weight: 600;
     }
@@ -118,7 +125,10 @@
 
     @include media-desktop {
       width: fit-content;
+      height: 100%;
+      padding-top: 2rem;
     }
+
     .shows {
       color: $primarycolor3;
       text-decoration: none;
@@ -135,9 +145,6 @@
       @include media-desktop {
         width: fit-content;
         transition: 500ms ease;
-      }
-      :hover {
-        border-bottom: 0.3rem $primarycolor3 solid;
       }
     }
   }

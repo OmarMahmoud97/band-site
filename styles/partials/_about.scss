@@ -35,6 +35,7 @@
     @include font-bold;
     padding: 2.5rem 0 0.5rem 1rem;
     width: 100%;
+
     @include media-tablet {
       font-size: 2.5rem;
     }
@@ -79,6 +80,7 @@
     .text-bold {
       padding-top: 1rem;
       @include font-bolder;
+
       @include media-desktop {
         font-size: 1.5rem;
       }
@@ -98,6 +100,7 @@
   .intro {
     padding: 1rem 0 2rem 0;
     @include font-bolder;
+
     @include media-desktop {
       font-size: 1.5rem;
     }

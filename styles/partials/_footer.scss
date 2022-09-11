@@ -13,13 +13,14 @@
     justify-content: center;
   }
 
-  &__header-box {
-    @include media-tablet {
-      width: fit-content;
-    }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
-  &__header-container {
+  &__header-wrapper {
     @include media-tablet {
       display: flex;
       width: 100%;
@@ -27,7 +28,13 @@
     }
 
     @include media-desktop {
-      width: 70.75rem;
+      width: 68rem;
+    }
+  }
+
+  &__header-container {
+    @include media-tablet {
+      width: fit-content;
     }
   }
 
@@ -60,10 +67,59 @@
     .icon--padding {
       width: 2rem;
     }
+    .icon {
+      width: 1.5rem;
+    }
 
     .icon-f {
       height: 1.5rem;
       padding: 0 2rem;
+    }
+  }
+
+  &__box {
+    @include media-tablet {
+      @include flex-center;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include media-desktop {
+      justify-content: flex-start;
+      width: 68rem;
+    }
+  }
+
+  &__container1 {
+    @include media-tablet {
+      // padding: 1rem 1rem 1rem;
+      width: 33%;
+    }
+
+    @include media-desktop {
+      width: 25%;
+    }
+  }
+
+  &__container2 {
+    @include media-tablet {
+      width: 33%;
+      // padding: 1rem 1rem 0 1rem;
+    }
+
+    @include media-desktop {
+      width: 25%;
+      padding: 0;
+    }
+  }
+
+  &__container3 {
+    @include media-tablet {
+      // padding: 1rem;
+      width: 33%;
+    }
+
+    @include media-desktop {
+      width: 25%;
     }
   }
 
@@ -76,68 +132,9 @@
       }
     }
   }
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__copywrite {
-    font-size: 0.9rem;
-    padding-top: 1rem;
-  }
-
-  &__box {
-    @include media-tablet {
-      @include flex-center;
-      flex-direction: row;
-      justify-content: center;
-    }
-    @include media-desktop {
-      justify-content: flex-start;
-      width: 63.75rem;
-    }
-  }
 
   &__pearl {
     padding: 1rem 0 1rem 0;
-
-    @include media-tablet {
-      padding: 2rem 0 1rem 0;
-    }
-  }
-
-  &__container2 {
-    @include media-tablet {
-      width: 33%;
-      padding: 1rem 1rem 0 1rem;
-    }
-
-    @include media-desktop {
-      width: 25%;
-      padding: 0;
-    }
-  }
-
-  &__container3 {
-    @include media-tablet {
-      padding: 1rem;
-      width: 33%;
-    }
-
-    @include media-desktop {
-      width: 25%;
-    }
-  }
-
-  &__container1 {
-    @include media-tablet {
-      padding: 1rem 1rem 1rem;
-      width: 22%;
-    }
-
-    @include media-desktop {
-      width: 25%;
-    }
   }
 
   &__subheader {
@@ -165,6 +162,7 @@
       @include flex-center;
       justify-content: flex-end;
     }
+
     @include media-desktop {
       width: 60%;
     }
@@ -182,5 +180,12 @@
   .pearl {
     text-decoration: none;
     color: $primarycolor3;
+  }
+  &__copywrite {
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    @include media-desktop {
+      width: 68rem;
+    }
   }
 }
