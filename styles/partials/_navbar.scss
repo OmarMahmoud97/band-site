@@ -122,6 +122,9 @@
   &__subheader {
     width: 50%;
     text-align: center;
+    @include media-tablet {
+      width: 25%;
+    }
 
     @include media-desktop {
       width: fit-content;

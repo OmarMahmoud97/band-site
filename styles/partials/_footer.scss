@@ -17,6 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     @include media-desktop {
+      width: 63.75rem;
       align-items: center;
       justify-content: center;
     }

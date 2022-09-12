@@ -13,12 +13,13 @@
   background-image: url(/assets/Images/hero-bio.jpg);
   @include hero;
   @include flex-center;
+
   &__section {
     flex-wrap: wrap;
-    @include media-desktop {
+    @include media-tablet {
       width: 63.75rem;
       @include flex-center;
-      justify-content: flex-start;
+      justify-content: center;
     }
   }
 
@@ -31,20 +32,29 @@
     width: 85%;
 
     @include media-tablet {
-      font-size: 3rem;
+      font-size: 2rem;
+      width: 40rem;
+      padding: 0;
     }
 
     @include media-desktop {
+      width: 63.75rem;
       font-size: 4rem;
+      padding: 0;
     }
   }
 
   &__subheader {
     color: $primarycolor3;
+    margin: 0;
     @include flex-center;
     width: 85%;
-    padding: 0 0 1.5rem 1.5rem;
+    padding-bottom: 1.5rem;
+    @include media-tablet {
+      width: 40rem;
+    }
     @include media-desktop {
+      width: 63.75rem;
       font-size: 1.5rem;
       @include font-bold;
     }
