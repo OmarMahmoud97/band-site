@@ -29,8 +29,6 @@
     @include flex-center;
     color: $primarycolor3;
     padding-left: 1.5rem;
-    width: 85%;
-
     @include media-tablet {
       font-size: 2rem;
       width: 40rem;

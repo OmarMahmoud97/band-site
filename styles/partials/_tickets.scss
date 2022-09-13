@@ -28,4 +28,12 @@
       }
     }
   }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__bookings {
+    height: 30vh;
+  }
 }
