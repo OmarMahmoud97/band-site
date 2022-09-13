@@ -39,15 +39,30 @@ for (let i = 0; i < showsObject.length; i++) {
   newDiv.classList.add("tickets__item");
   tickets.appendChild(newDiv);
 
-  let ticketDate = document.createElement("h4");
+  let dateHeader = document.createElement("h4");
+  dateHeader.classList.add("tickets__date-header");
+  dateHeader.innerText = "Date";
+  newDiv.appendChild(dateHeader);
+
+  let ticketDate = document.createElement("p");
   ticketDate.classList.add("tickets__date");
   ticketDate.innerText = showsObject[i].date;
   newDiv.appendChild(ticketDate);
+
+  let venueHeader = document.createElement("h4");
+  venueHeader.classList.add("tickets__venue-header");
+  venueHeader.innerText = "Venue";
+  newDiv.appendChild(venueHeader);
 
   let ticketVenue = document.createElement("p");
   ticketVenue.classList.add("tickets__venue");
   ticketVenue.innerText = showsObject[i].venue;
   newDiv.appendChild(ticketVenue);
+
+  let locationHeader = document.createElement("h4");
+  locationHeader.classList.add("tickets__location-header");
+  locationHeader.innerText = "Location";
+  newDiv.appendChild(locationHeader);
 
   let ticketLocation = document.createElement("p");
   ticketLocation.classList.add("tickets__location");

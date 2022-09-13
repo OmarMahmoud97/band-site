@@ -502,14 +502,10 @@ body {
   }
 }
 
-.tickets {
-  height: 70vh;
-}
 .tickets__header {
   display: flex;
   height: 15%;
   align-items: center;
-  padding-left: 1.5rem;
 }
 .tickets__header .head {
   font-family: "AvenirNext";
@@ -529,11 +525,33 @@ body {
     width: 63.75rem;
   }
 }
-.tickets__item {
+.tickets__bookings {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.tickets__bookings {
-  height: 30vh;
+.tickets__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 3rem;
+}
+.tickets__date-header, .tickets__location-header, .tickets__venue-header {
+  font-size: 1rem;
+  color: #afafaf;
+  padding: 1rem 0;
+}
+.tickets__btn {
+  background-color: #323232;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }/*# sourceMappingURL=shows.css.map */

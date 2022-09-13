@@ -4,14 +4,10 @@
 @use "./mixin" as *;
 
 .tickets {
-  height: 70vh;
-
   &__header {
     display: flex;
     height: 15%;
     align-items: center;
-    padding-left: 1.5rem;
-
     .head {
       @include font-bolder;
       font-size: 1.5rem;
@@ -28,12 +24,39 @@
       }
     }
   }
-  &__item {
+
+  &__bookings {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
-  &__bookings {
-    height: 30vh;
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+
+  &__date-header,
+  &__location-header,
+  &__venue-header {
+    font-size: 1rem;
+    color: $primarycolor2;
+    padding: 1rem 0;
+  }
+
+  &__btn {
+    background-color: $primarycolor;
+    color: $primarycolor3;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
   }
 }
