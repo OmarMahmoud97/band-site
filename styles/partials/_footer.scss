@@ -65,20 +65,14 @@
       justify-content: space-evenly;
       width: 20%;
     }
-
-    .icon--padding {
-      width: 2rem;
-    }
-    .icon {
-      width: 1.5rem;
-    }
-
-    .icon-f {
-      height: 1.5rem;
-      padding: 0 2rem;
-    }
   }
-
+  &__icon {
+    width: 1.5rem;
+  }
+  &__icon-f {
+    height: 1.5rem;
+    padding: 0 2rem;
+  }
   &__box {
     @include media-tablet {
       @include flex-center;
@@ -123,17 +117,16 @@
     }
   }
 
-  &__address {
+  &__add {
     padding-top: 1rem;
-
-    .address {
-      @include media-tablet {
-        padding-bottom: 1rem;
-      }
+  }
+  &__address {
+    @include media-tablet {
+      padding-bottom: 1rem;
     }
   }
 
-  &__pearl {
+  &__agent {
     padding: 1rem 0 1rem 0;
   }
 
@@ -175,9 +168,9 @@
       }
     }
   }
-  .info,
-  .carson,
-  .pearl {
+  &__info,
+  &__carson,
+  &__pearl {
     text-decoration: none;
     color: $primarycolor3;
   }

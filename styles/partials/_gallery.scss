@@ -46,25 +46,24 @@
     @include media-desktop {
       width: 92%;
     }
+  }
+  &__img {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: $secondarycolor3;
 
-    .img {
-      width: 100%;
-      margin-top: 1rem;
-      background-color: $secondarycolor3;
-
-      @include media-tablet {
-        width: 30%;
-        margin-top: 1.5rem;
-      }
-
-      @include media-desktop {
-        filter: grayscale(100);
-        transition: 500ms ease;
-      }
+    @include media-tablet {
+      width: 30%;
+      margin-top: 1.5rem;
     }
 
-    .img:hover {
-      filter: grayscale(0);
+    @include media-desktop {
+      filter: grayscale(100);
+      transition: 500ms ease;
     }
+  }
+
+  :hover {
+    filter: grayscale(0);
   }
 }

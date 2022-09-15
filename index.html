@@ -12,7 +12,7 @@
       <section class="navbar">
         <div class="navbar__container">
           <div class="navbar__header">
-            <div class="navbar__img-container">
+            <div class="navbar__img">
               <a href="./index.html">
                 <img
                   class="navbar__logo"
@@ -24,10 +24,10 @@
           </div>
           <ul class="navbar__subheader-container">
             <li class="navbar__subheader-active">
-              <a class="biography" href="./index.html">Biography</a>
+              <a class="navbar__biography" href="./index.html">Biography</a>
             </li>
             <li class="navbar__subheader">
-              <a class="shows" href="./pages/shows.html">Shows</a>
+              <a class="navbar__shows" href="./pages/shows.html">Shows</a>
             </li>
           </ul>
         </div>
@@ -41,35 +41,35 @@
         </section>
       </section>
     </header>
-    <main>
-      <div class="about-header">
+    <main class="musicians">
+      <div class="musicians__head">
         <h2 class="musicians__header">About the Musicians</h2>
       </div>
 
-      <section class="musicians">
+      <section class="musicians__section">
         <div class="musicians__container">
           <div class="musicians__img">
             <img
-              class="band"
+              class="musicians__band"
               src="./assets/Images/band.jpg"
               alt="picture of band"
             />
           </div>
           <div class="musicians__caption-wrapper">
             <figcaption class="musicians__caption">
-              <p class="text-bold">
+              <p class="musicians__bold">
                 "We push each other to be the best. It’s not uncommon for one of
                 us to say ‘this needs to be better, back to the drawing board’”
               </p>
-              <p class="text-bryan">
+              <p class="musicians__bryan">
                 - Bryan Teddy, lead vocalist of The Bees Knees
               </p>
-              <p class="intro">The Bees Knees</p>
+              <p class="musicians__intro">The Bees Knees</p>
             </figcaption>
           </div>
 
           <article class="musicians__text">
-            <p class="text-box">
+            <p class="musicians__textbox">
               The Bees Knees is a pop rock band originating from San Francisco,
               California. The band consists of lead vocalist Bryan Teddy,
               guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent
@@ -81,7 +81,7 @@
               sign with Magenta Records.
             </p>
 
-            <p class="text-box">
+            <p class="musicians__textbox">
               From there, the band has soared, gaining international recognition
               and ranking in the top 10 on the Poster Charts. New fans
               immediately fell in love with the band’s original and organic
@@ -102,26 +102,62 @@
         </div>
         <div class="gallery__wrapper">
           <div class="gallery__container">
-            <img class="img" src="./assets/Images/Photo-gallery-1.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-2.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-3.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-4.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-5.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-6.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-7.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-8.jpg" alt="" />
-            <img class="img" src="./assets/Images/Photo-gallery-9.jpg" alt="" />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-1.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-2.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-3.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-4.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-5.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-6.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-7.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-8.jpg"
+              alt=""
+            />
+            <img
+              class="gallery__img"
+              src="./assets/Images/Photo-gallery-9.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <section class="conversation">
         <div><h3 class="conversation__header">Join the Conversation</h3></div>
-        <div class="conversation__form">
-          <form class="form" id="form">
-            <div class="form__container">
-              <label class="form__label" for="fullName">Name</label>
+        <div>
+          <form class="conversation__form" id="form">
+            <div class="conversation__container">
+              <label class="conversation__label" for="fullName">Name</label>
 
-              <div class="form__name">
+              <div class="conversation__name">
                 <input
                   type="text"
                   placeholder="Enter your name"
@@ -132,8 +168,8 @@
                 />
               </div>
 
-              <label class="form__label" for="comment">Comment</label>
-              <div class="form__comment">
+              <label class="conversation__label" for="comment">Comment</label>
+              <div class="conversation__comment">
                 <textarea
                   type="text"
                   class="comment"
@@ -143,7 +179,9 @@
                   required
                 ></textarea>
               </div>
-              <button class="btn" name="btn" type="submit">Comment</button>
+              <button class="conversation__btn" name="btn" type="submit">
+                Comment
+              </button>
             </div>
           </form>
         </div>
@@ -162,19 +200,19 @@
                 ><img
                   src="./assets/Icons/SVG/Icon-instagram.svg"
                   alt="instagram icon"
-                  class="icon"
+                  class="footer__icon"
               /></a>
               <a href="https://www.facebook.com/" target="_blank"
                 ><img
                   src="./assets/Icons/SVG/Icon-facebook.svg"
                   alt="facebook icon"
-                  class="icon-f"
+                  class="footer__icon-f"
               /></a>
               <a href="https://twitter.com/" target="_blank"
                 ><img
                   src="./assets/Icons/SVG/Icon-twitter.svg"
                   alt="twitter icon"
-                  class="icon"
+                  class="footer__icon"
               /></a>
             </div>
             <div class="footer__logo-tablet">
@@ -194,11 +232,11 @@
                 <p>The Bees Knees Managment</p>
               </div>
 
-              <div class="footer__address">
-                <div class="address">
+              <div class="footer__add">
+                <div class="footer__address">
                   <p>503 Broadway Penthouse, New York, NY 10012, USA</p>
                 </div>
-                <a class="info" href="mailto:info@thebeesknees.com">
+                <a class="footer__info" href="mailto:info@thebeesknees.com">
                   info@thebeesknees.com</a
                 >
               </div>
@@ -210,10 +248,13 @@
               </div>
 
               <div>
-                <p class="footer__pearl">
+                <p class="footer__agent">
                   Booking Agent for US / South America / Japan
                 </p>
-                <a class="pearl" href="mailto:pearl.gregg@limitlessag.com">
+                <a
+                  class="footer__pearl"
+                  href="mailto:pearl.gregg@limitlessag.com"
+                >
                   pearl.gregg@limitlessag.com</a
                 >
               </div>
@@ -229,7 +270,10 @@
                   <p>Booking Agent for</p>
                   <p>UK / EU / AU</p>
                 </div>
-                <a class="carson" href="mailto:cwhyte@archentertainment.com">
+                <a
+                  class="footer__carson"
+                  href="mailto:cwhyte@archentertainment.com"
+                >
                   cwhyte@archentertainment.com</a
                 >
               </div>

@@ -2,24 +2,24 @@
 @use "./resets" as *;
 @use "./fonts" as *;
 @use "./mixin" as *;
-
-.about-header {
-  width: 100%;
-  @include flex-center;
-  justify-content: center;
-}
-
 .musicians {
-  @include media-tablet {
-    padding: 2rem;
-  }
-
-  @include media-desktop {
+  &__head {
+    width: 100%;
     @include flex-center;
     justify-content: center;
-    flex-direction: column;
   }
 
+  &__section {
+    @include media-tablet {
+      padding: 2rem;
+    }
+
+    @include media-desktop {
+      @include flex-center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
   &__container {
     @include media-desktop {
       @include flex-center;
@@ -55,7 +55,7 @@
       width: 100%;
     }
 
-    .band {
+    &__band {
       width: 100%;
 
       @include media-desktop {
@@ -77,7 +77,7 @@
       width: 70%;
     }
 
-    .text-bold {
+    &__bold {
       padding-top: 1rem;
       @include font-bolder;
 
@@ -87,7 +87,7 @@
     }
   }
 
-  .text-bryan {
+  &__bryan {
     padding-top: 1rem;
     font-weight: 500;
 
@@ -97,7 +97,7 @@
     }
   }
 
-  .intro {
+  &__intro {
     padding: 1rem 0 2rem 0;
     @include font-bolder;
 
@@ -110,7 +110,7 @@
     @include media-tablet {
       @include flex-between;
     }
-    .text-box {
+    &__textbox {
       padding-bottom: 1rem;
       @include media-tablet {
         width: 48%;

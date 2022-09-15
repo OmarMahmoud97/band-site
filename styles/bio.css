@@ -135,8 +135,7 @@ body {
     transition: 500ms ease;
   }
 }
-.navbar__subheader-active .biography,
-.navbar__subheader-active .shows {
+.navbar__subheader-active__biography, .navbar__subheader-active__shows {
   color: white;
   text-decoration: none;
   width: 100%;
@@ -145,8 +144,7 @@ body {
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .navbar__subheader-active .biography,
-.navbar__subheader-active .shows {
+  .navbar__subheader-active__biography, .navbar__subheader-active__shows {
     padding: 0;
   }
 }
@@ -171,42 +169,29 @@ body {
     padding-top: 2rem;
   }
 }
-.navbar__subheader .shows,
-.navbar__subheader .biography {
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  height: 100%;
-  padding: 1rem 0 0 0;
-}
 @media screen and (min-width: 768px) {
-  .navbar__subheader .shows,
-.navbar__subheader .biography {
+  .navbar__subheader {
     padding: 0;
     width: 25%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__subheader .shows,
-.navbar__subheader .biography {
+  .navbar__subheader {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     transition: 500ms ease;
   }
 }
-@media screen and (min-width: 1280px) {
-  .navbar__subheader:hover {
-    border-bottom: 0.3rem white solid;
-    text-align: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 100%;
-    padding-top: 2rem;
-    font-weight: bolder;
-  }
+.navbar__subheader :hover {
+  border-bottom: 0.3rem white solid;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding-top: 2rem;
+  font-weight: bolder;
 }
 
 .media {
@@ -307,20 +292,19 @@ body {
   }
 }
 
-.about-header {
+.musicians__head {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 @media screen and (min-width: 768px) {
-  .musicians {
+  .musicians__section {
     padding: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .musicians {
+  .musicians__section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -366,11 +350,11 @@ body {
     width: 100%;
   }
 }
-.musicians__img .band {
+.musicians__img__band {
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .musicians__img .band {
+  .musicians__img__band {
     min-width: 70%;
   }
 }
@@ -386,35 +370,35 @@ body {
     width: 70%;
   }
 }
-.musicians__caption .text-bold {
+.musicians__caption__bold {
   padding-top: 1rem;
   font-family: "AvenirNext";
   font-weight: 700;
   font-style: normal;
 }
 @media screen and (min-width: 1280px) {
-  .musicians__caption .text-bold {
+  .musicians__caption__bold {
     font-size: 1.5rem;
   }
 }
-.musicians .text-bryan {
+.musicians__bryan {
   padding-top: 1rem;
   font-weight: 500;
 }
 @media screen and (min-width: 1280px) {
-  .musicians .text-bryan {
+  .musicians__bryan {
     font-size: 1.2rem;
     padding-bottom: 1.5rem;
   }
 }
-.musicians .intro {
+.musicians__intro {
   padding: 1rem 0 2rem 0;
   font-family: "AvenirNext";
   font-weight: 700;
   font-style: normal;
 }
 @media screen and (min-width: 1280px) {
-  .musicians .intro {
+  .musicians__intro {
     font-size: 1.5rem;
   }
 }
@@ -425,16 +409,16 @@ body {
     justify-content: space-between;
   }
 }
-.musicians__text .text-box {
+.musicians__text__textbox {
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .musicians__text .text-box {
+  .musicians__text__textbox {
     width: 48%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .musicians__text .text-box {
+  .musicians__text__textbox {
     font-size: 1.2rem;
   }
 }
@@ -512,13 +496,10 @@ body {
     width: 20%;
   }
 }
-.footer__icons .icon--padding {
-  width: 2rem;
-}
-.footer__icons .icon {
+.footer__icon {
   width: 1.5rem;
 }
-.footer__icons .icon-f {
+.footer__icon-f {
   height: 1.5rem;
   padding: 0 2rem;
 }
@@ -567,15 +548,15 @@ body {
     width: 25%;
   }
 }
-.footer__address {
+.footer__add {
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__address .address {
+  .footer__address {
     padding-bottom: 1rem;
   }
 }
-.footer__pearl {
+.footer__agent {
   padding: 1rem 0 1rem 0;
 }
 .footer__subheader {
@@ -618,9 +599,7 @@ body {
     padding: 1rem 0;
   }
 }
-.footer .info,
-.footer .carson,
-.footer .pearl {
+.footer__info, .footer__carson, .footer__pearl {
   text-decoration: none;
   color: white;
 }
@@ -682,33 +661,41 @@ body {
     width: 92%;
   }
 }
-.gallery__container .img {
+.gallery__img {
   width: 100%;
   margin-top: 1rem;
   background-color: #fafafa;
 }
 @media screen and (min-width: 768px) {
-  .gallery__container .img {
+  .gallery__img {
     width: 30%;
     margin-top: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .gallery__container .img {
+  .gallery__img {
     filter: grayscale(100);
     transition: 500ms ease;
   }
 }
-.gallery__container .img:hover {
+.gallery :hover {
   filter: grayscale(0);
 }
 
+.conversation {
+  background-color: #e1e1e1;
+}
 .conversation__header {
   font-size: 1.5rem;
   padding-bottom: 2rem;
 }
-
-.form {
+.conversation__container {
+  display: flex;
+  align-items: flex-start;
+  width: 80%;
+  flex-direction: column;
+}
+.conversation__form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -717,21 +704,13 @@ body {
   padding-bottom: 2rem;
   margin-bottom: 1rem;
 }
-
-.form__name,
-.form__comment {
-  width: 100%;
-}
-
-.name,
-.comment,
-.btn {
+.conversation__name, .conversation__comment, .conversation__btn {
   width: 80%;
   padding: 0.5rem;
   margin: 0.5rem;
+  margin-bottom: 0;
 }
-
-.btn {
+.conversation__btn {
   background-color: #323232;
   color: #fafafa;
   border-radius: 0.5rem;
@@ -741,19 +720,6 @@ body {
   font-size: 1.5rem;
   padding: 0.5rem;
 }
-
-.form__subheader {
-  color: #afafaf;
-  padding: 0.5rem 0;
-}
-
-.form__container {
-  display: flex;
-  align-items: flex-start;
-  width: 80%;
-  flex-direction: column;
-}
-
-.conversation {
-  background-color: #e1e1e1;
+.conversation__name, .conversation__comment {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

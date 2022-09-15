@@ -100,8 +100,8 @@
       transition: 500ms ease;
     }
 
-    .biography,
-    .shows {
+    &__biography,
+    &__shows {
       color: $primarycolor3;
       text-decoration: none;
       width: 100%;
@@ -132,29 +132,17 @@
       padding-top: 2rem;
     }
 
-    .shows,
-    .biography {
-      color: $primarycolor3;
-      text-decoration: none;
-      width: 100%;
-      display: block;
-      height: 100%;
-      padding: 1rem 0 0 0;
-
-      @include media-tablet {
-        padding: 0;
-        width: 25%;
-      }
-
-      @include media-desktop {
-        width: fit-content;
-        transition: 500ms ease;
-      }
+    @include media-tablet {
+      padding: 0;
+      width: 25%;
     }
-  }
 
-  @include media-desktop {
-    &__subheader:hover {
+    @include media-desktop {
+      width: fit-content;
+      transition: 500ms ease;
+    }
+
+    :hover {
       border-bottom: 0.3rem $primarycolor3 solid;
       text-align: center;
       width: fit-content;

@@ -4,54 +4,48 @@
 @use "./mixin" as *;
 
 .conversation {
+  background-color: $secondarycolor2;
+
   &__header {
     font-size: 1.5rem;
     padding-bottom: 2rem;
   }
-}
 
-.form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-bottom: 1px solid $secondarycolor2;
-  padding-bottom: 2rem;
-  margin-bottom: 1rem;
-}
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid $secondarycolor2;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
 
-.form__name,
-.form__comment {
-  width: 100%;
-}
-.name,
-.comment,
-.btn {
-  width: 80%;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
+  &__name,
+  &__comment,
+  &__btn {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
 
-.btn {
-  background-color: $primarycolor;
-  color: $secondarycolor3;
-  border-radius: 0.5rem;
-  @include font-bold;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-}
-
-.form__subheader {
-  color: $primarycolor2;
-  padding: 0.5rem 0;
-}
-
-.form__container {
-  display: flex;
-  align-items: flex-start;
-  width: 80%;
-  flex-direction: column;
-}
-.conversation {
-  background-color: $secondarycolor2;
+  &__btn {
+    background-color: $primarycolor;
+    color: $secondarycolor3;
+    border-radius: 0.5rem;
+    @include font-bold;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  &__name,
+  &__comment {
+    width: 100%;
+  }
 }

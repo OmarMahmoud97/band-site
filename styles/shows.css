@@ -135,8 +135,7 @@ body {
     transition: 500ms ease;
   }
 }
-.navbar__subheader-active .biography,
-.navbar__subheader-active .shows {
+.navbar__subheader-active__biography, .navbar__subheader-active__shows {
   color: white;
   text-decoration: none;
   width: 100%;
@@ -145,8 +144,7 @@ body {
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .navbar__subheader-active .biography,
-.navbar__subheader-active .shows {
+  .navbar__subheader-active__biography, .navbar__subheader-active__shows {
     padding: 0;
   }
 }
@@ -171,42 +169,29 @@ body {
     padding-top: 2rem;
   }
 }
-.navbar__subheader .shows,
-.navbar__subheader .biography {
-  color: white;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  height: 100%;
-  padding: 1rem 0 0 0;
-}
 @media screen and (min-width: 768px) {
-  .navbar__subheader .shows,
-.navbar__subheader .biography {
+  .navbar__subheader {
     padding: 0;
     width: 25%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__subheader .shows,
-.navbar__subheader .biography {
+  .navbar__subheader {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     transition: 500ms ease;
   }
 }
-@media screen and (min-width: 1280px) {
-  .navbar__subheader:hover {
-    border-bottom: 0.3rem white solid;
-    text-align: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 100%;
-    padding-top: 2rem;
-    font-weight: bolder;
-  }
+.navbar__subheader :hover {
+  border-bottom: 0.3rem white solid;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding-top: 2rem;
+  font-weight: bolder;
 }
 
 .media {
@@ -380,13 +365,10 @@ body {
     width: 20%;
   }
 }
-.footer__icons .icon--padding {
-  width: 2rem;
-}
-.footer__icons .icon {
+.footer__icon {
   width: 1.5rem;
 }
-.footer__icons .icon-f {
+.footer__icon-f {
   height: 1.5rem;
   padding: 0 2rem;
 }
@@ -435,15 +417,15 @@ body {
     width: 25%;
   }
 }
-.footer__address {
+.footer__add {
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .footer__address .address {
+  .footer__address {
     padding-bottom: 1rem;
   }
 }
-.footer__pearl {
+.footer__agent {
   padding: 1rem 0 1rem 0;
 }
 .footer__subheader {
@@ -486,9 +468,7 @@ body {
     padding: 1rem 0;
   }
 }
-.footer .info,
-.footer .carson,
-.footer .pearl {
+.footer__info, .footer__carson, .footer__pearl {
   text-decoration: none;
   color: white;
 }

@@ -70,25 +70,8 @@ for (let i = 0; i < showsObject.length; i++) {
 
   let ticketBtn = document.createElement("a");
   ticketBtn.classList.add("tickets__btn");
+  ticketBtn.setAttribute("href", "https://youtu.be/dQw4w9WgXcQ");
+  ticketBtn.target = "_blank";
   ticketBtn.innerText = "BUY TICKETS";
   newDiv.appendChild(ticketBtn);
 }
-
-// const form = document.querySelector(".form");
-// const handleForm = (event) => {
-//   event.preventDefault();
-//   console.log("ping");
-//   console.log(event.target);
-
-//   let name = event.target.name.value;
-//   let message = event.target.message.value;
-
-//   console.log(name);
-//   console.log(message);
-// };
-// form.addEventListener("btn");
-
-// const newComment = {
-//   name:
-//   message:
-// }
