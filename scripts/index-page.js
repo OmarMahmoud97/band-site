@@ -1,19 +1,16 @@
 // creating an array of the pre-made comments
-
-let madeComments = [
+const comments = [
   {
     name: "Connor Walton",
     date: "02/17/2021",
     comment:
       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    pictureClass: "comments-pre__circle",
   },
   {
     name: "Emilie Beach",
     date: "01/09/2021",
     comment:
       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    pictureClass: "comments-pre__circle",
   },
   {
     name: "Miles Acosta",
@@ -23,26 +20,83 @@ let madeComments = [
   },
 ];
 
-let comments = document.querySelector(".conversation__section");
-let div = document.querySelector(".div");
+const renderComments = () => {
+  const commentsEl = document.querySelector(".conversation__section");
 
-for (let i = 0; i < madeComments.length; i++) {
-  let newDiv = document.createElement("div");
-  newDiv.classList.add("conversation__item");
-  comments.appendChild(newDiv);
+  for (let i = 0; i < comments.length; i++) {
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("conversation__item");
+    commentsEl.appendChild(newDiv);
 
-  let nameEl = document.createElement("h5");
-  nameEl.classList.add("conversation__name");
-  nameEl.innerText = madeComments[i].name;
-  newDiv.appendChild(nameEl);
+    const nameEl = document.createElement("h5");
+    nameEl.classList.add("conversation__name");
+    nameEl.innerText = comments[i].name;
+    newDiv.appendChild(nameEl);
 
-  let dateEl = document.createElement("p");
-  dateEl.classList.add("conversation__date");
-  dateEl.innerText = madeComments[i].date;
-  newDiv.appendChild(dateEl);
+    const dateEl = document.createElement("p");
+    dateEl.classList.add("conversation__date");
+    dateEl.innerText = comments[i].date;
+    newDiv.appendChild(dateEl);
 
-  let commentEl = document.createElement("p");
-  commentEl.classList.add("conversation__comment");
-  commentEl.innerText = madeComments[i].comment;
-  newDiv.appendChild(commentEl);
-}
+    const commentEl = document.createElement("p");
+    commentEl.classList.add("conversation__comment");
+    commentEl.innerText = comments[i].comment;
+    newDiv.appendChild(commentEl);
+  }
+};
+
+renderComments();
+
+let now = new Date();
+console.log(now);
+// form handling
+const handleForm = (event) => {
+  event.preventDefault();
+
+  const formData = {
+    name: event.target.fullName.value,
+    date: new Date().toLocaleDateString(),
+    comment: event.target.comment.value,
+  };
+
+  comments.push(formData);
+
+  const commentList = document.querySelector(".conversation__section");
+
+  console.log(commentList);
+
+  // Remove all the comments from the page (to prevent any dupes)
+  commentList.innerHTML = "";
+
+  // Now that we've pushed the new comment Obj to the comments arr
+  // Re-run the renderComments function, which will render the comments on the page
+  // With the updated comments array
+  renderComments();
+
+  event.target.fullName.value = "";
+  event.target.comment.value = "";
+};
+
+// create comment div
+const createNewComment = () => {
+  const commentItem = document.createElement("div");
+  commentItem.classList.add("form__input");
+
+  const commentName = document.createElement("h5");
+  commentName.classList.add("name__inp8t");
+  commentName.appendChild(commentItem);
+
+  const commentInput = document.createElement("p");
+  commentInput.classList.add("comment__input");
+  commentInput.appendChild(commentItem);
+
+  return commentItem;
+};
+
+// handle the submit
+const registerSubmitHandler = () => {
+  const form = document.getElementById("form");
+  form.addEventListener("submit", handleForm);
+};
+
+registerSubmitHandler();

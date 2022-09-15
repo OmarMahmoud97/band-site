@@ -4,9 +4,6 @@
 @use "./mixin" as *;
 
 .conversation {
-  &__section {
-    height: 30vh;
-  }
   &__header {
     font-size: 1.5rem;
     padding-bottom: 2rem;
@@ -21,6 +18,11 @@
   border-bottom: 1px solid $secondarycolor2;
   padding-bottom: 2rem;
   margin-bottom: 1rem;
+}
+
+.form__name,
+.form__comment {
+  width: 100%;
 }
 .name,
 .comment,
@@ -48,11 +50,8 @@
   display: flex;
   align-items: flex-start;
   width: 80%;
-}
-.name {
-  background-color: $secondarycolor2;
+  flex-direction: column;
 }
 .conversation {
-  height: 116vh;
   background-color: $secondarycolor2;
 }

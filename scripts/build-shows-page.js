@@ -32,7 +32,6 @@ let showsObject = [
 ];
 
 let tickets = document.querySelector(".tickets__bookings");
-let div = document.querySelector(".div");
 
 for (let i = 0; i < showsObject.length; i++) {
   let newDiv = document.createElement("div");
@@ -74,3 +73,22 @@ for (let i = 0; i < showsObject.length; i++) {
   ticketBtn.innerText = "BUY TICKETS";
   newDiv.appendChild(ticketBtn);
 }
+
+// const form = document.querySelector(".form");
+// const handleForm = (event) => {
+//   event.preventDefault();
+//   console.log("ping");
+//   console.log(event.target);
+
+//   let name = event.target.name.value;
+//   let message = event.target.message.value;
+
+//   console.log(name);
+//   console.log(message);
+// };
+// form.addEventListener("btn");
+
+// const newComment = {
+//   name:
+//   message:
+// }

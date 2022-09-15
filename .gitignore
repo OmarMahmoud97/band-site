@@ -1,2 +1,17 @@
 #Ignore scss map files
 *.css.map
+
+const handleForm = (event) => {
+  event.preventDefault();
+  console.log(event.target.name.value);
+  console.log(event.target.comment.value);
+
+  // const userName = event.target.name.value;
+  // const userComment = event.target.comment.value;
+
+  // const newComment = {
+  //   title: userName,
+  //   description: userComment,
+};
+let newComment = document.querySelector(".conversation__section");
+newComment.addEventListener("submit", handleForm);
