@@ -99,21 +99,19 @@
       padding-top: 2rem;
       transition: 500ms ease;
     }
+  }
+  &__biography,
+  &__shows {
+    color: $primarycolor3;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    height: 100%;
+    padding-top: 1rem;
 
-    &__biography,
-    &__shows {
-      color: $primarycolor3;
-      text-decoration: none;
-      width: 100%;
-      display: block;
-      height: 100%;
-      padding-top: 1rem;
-
-      @include media-tablet {
-        padding: 0;
-      }
+    @include media-tablet {
+      padding: 0;
     }
-
     :hover {
       font-weight: 600;
     }
@@ -126,12 +124,6 @@
       width: 25%;
     }
 
-    @include media-desktop {
-      width: fit-content;
-      height: 100%;
-      padding-top: 2rem;
-    }
-
     @include media-tablet {
       padding: 0;
       width: 25%;
@@ -140,15 +132,13 @@
     @include media-desktop {
       width: fit-content;
       transition: 500ms ease;
-    }
-
-    :hover {
-      border-bottom: 0.3rem $primarycolor3 solid;
-      text-align: center;
-      width: fit-content;
-      height: 100%;
-      padding-top: 2rem;
-      font-weight: bolder;
+      :hover {
+        border-bottom: 0.3rem $primarycolor3 solid;
+        text-align: center;
+        width: fit-content;
+        height: 100%;
+        font-weight: bolder;
+      }
     }
   }
 }
