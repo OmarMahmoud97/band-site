@@ -5,6 +5,15 @@
 
 .conversation {
   background-color: $secondarycolor2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    @include media-desktop {
+      width: 63.75rem;
+    }
+  }
 
   &__header {
     font-size: 1.5rem;

@@ -73,7 +73,6 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding-left: 2rem;
     padding-top: 1rem;
   }
 }
@@ -220,7 +219,10 @@ body {
   background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__section {
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .hero__section {
@@ -234,7 +236,7 @@ body {
   font-family: "AvenirNext";
   font-weight: 600;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   color: white;
@@ -260,7 +262,6 @@ body {
   display: flex;
   align-items: center;
   width: 85%;
-  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .hero__subheader {
@@ -325,7 +326,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__header {
     width: 100%;
-    padding: 1rem 1rem 0 0;
+    padding: 1rem 4rem 0 0;
     font-size: 2rem;
   }
 }
@@ -437,7 +438,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__logo-tablet {
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -512,6 +513,7 @@ body {
 .tickets__btn {
   background-color: #323232;
   color: white;
+  text-decoration: none;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -519,4 +521,15 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   margin-top: 1rem;
+}
+.tickets__labels {
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__labels {
+    display: flex;
+  }
 }/*# sourceMappingURL=shows.css.map */

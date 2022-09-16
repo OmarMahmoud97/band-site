@@ -22,7 +22,10 @@
     background-color: rgba(#323232, 0.5);
   }
   &__section {
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
     @include media-tablet {
       width: 63.75rem;
       @include flex-center;
@@ -32,7 +35,7 @@
 
   &__title {
     @include font-bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     @include flex-center;
     color: $primarycolor3;
     padding-left: 1.5rem;
@@ -54,7 +57,7 @@
     margin: 0;
     @include flex-center;
     width: 85%;
-    padding-bottom: 1.5rem;
+    // padding-bottom: 1.5rem;
     @include media-tablet {
       width: 40rem;
     }

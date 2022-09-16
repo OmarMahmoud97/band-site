@@ -33,13 +33,44 @@ let showsObject = [
 
 let tickets = document.querySelector(".tickets__bookings");
 
+// Desktop labels
+const buildDesktopLabels = () => {
+  // wrapper
+  const desktopLabelWrapper = document.createElement("div");
+  desktopLabelWrapper.classList.add("tickets__labels");
+  tickets.appendChild(desktopLabelWrapper);
+
+  // label 1
+  let dateHeader = document.createElement("h4");
+  dateHeader.classList.add("tickets__date-header-desktop");
+  dateHeader.innerText = "Date";
+  desktopLabelWrapper.appendChild(dateHeader);
+
+  let venueHeader = document.createElement("h4");
+  venueHeader.classList.add("tickets__venue-header-desktop");
+  venueHeader.innerText = "Venue";
+  desktopLabelWrapper.appendChild(venueHeader);
+
+  let locationHeader = document.createElement("h4");
+  locationHeader.classList.add("tickets__location-header-desktop");
+  locationHeader.innerText = "Location";
+  desktopLabelWrapper.appendChild(locationHeader);
+
+  let emptyDiv = document.createElement("h4");
+  emptyDiv.classList.add("tickets__location-header-desktop");
+  emptyDiv.innerText = "";
+  desktopLabelWrapper.appendChild(emptyDiv);
+};
+
+buildDesktopLabels();
+
 for (let i = 0; i < showsObject.length; i++) {
   let newDiv = document.createElement("div");
   newDiv.classList.add("tickets__item");
   tickets.appendChild(newDiv);
 
   let dateHeader = document.createElement("h4");
-  dateHeader.classList.add("tickets__date-header");
+  dateHeader.classList.add("tickets__date-header-mobile");
   dateHeader.innerText = "Date";
   newDiv.appendChild(dateHeader);
 

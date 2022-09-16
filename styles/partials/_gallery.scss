@@ -5,23 +5,49 @@
 
 .gallery {
   background-color: $secondarycolor3;
-  padding: 2rem 1rem;
-  @include media-desktop {
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__wrapper {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include media-tablet {
+      width: 63.75rem;
+
+      margin: 0 auto;
+    }
+    @include media-desktop {
+      margin: 0;
+    }
   }
 
   &__title {
     h2 {
       font-size: 2rem;
 
-      @include media-desktop {
-        font-size: 3rem;
+      @include media-tablet {
+        width: 100%;
+        padding-left: 1rem;
       }
     }
 
-    @include media-tablet {
-      padding-left: 1rem;
+    @include media-desktop {
+      font-size: 3rem;
     }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   &__wrapper {
@@ -41,10 +67,6 @@
 
     @include media-tablet {
       justify-content: space-evenly;
-    }
-
-    @include media-desktop {
-      width: 92%;
     }
   }
   &__img {

@@ -3,6 +3,10 @@
 @use "./fonts" as *;
 @use "./mixin" as *;
 .musicians {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   &__head {
     width: 100%;
     @include flex-center;
@@ -10,7 +14,9 @@
   }
 
   &__section {
+    width: 90%;
     @include media-tablet {
+      min-width: 70%;
       padding: 2rem;
     }
 
@@ -33,22 +39,24 @@
     color: $primarycolor;
     font-size: 1.5rem;
     @include font-bold;
-    padding: 2.5rem 0 0.5rem 1rem;
+    padding: 1rem 0 0.5rem 0rem;
     width: 100%;
 
     @include media-tablet {
       font-size: 2.5rem;
+      width: 90%;
     }
 
     @include media-desktop {
       width: 63.75rem;
-      padding-left: 1rem;
-      margin-right: 12rem;
       font-size: 3rem;
     }
   }
 
   &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include media-desktop {
       @include flex-center;
       justify-content: center;

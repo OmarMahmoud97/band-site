@@ -46,7 +46,7 @@
 
     @include media-tablet {
       width: 100%;
-      padding: 1rem 1rem 0 0;
+      padding: 1rem 4rem 0 0;
       font-size: 2rem;
     }
     @include media-desktop {
@@ -151,7 +151,7 @@
     display: none;
 
     @include media-tablet {
-      width: 50%;
+      width: 40%;
       @include flex-center;
       justify-content: flex-end;
     }

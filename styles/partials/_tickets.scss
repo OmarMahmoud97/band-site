@@ -51,6 +51,7 @@
   &__btn {
     background-color: $primarycolor;
     color: $primarycolor3;
+    text-decoration: none;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -58,5 +59,14 @@
     padding: 0.5rem;
     cursor: pointer;
     margin-top: 1rem;
+  }
+  &__labels {
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+    @include media-desktop {
+      display: flex;
+    }
   }
 }

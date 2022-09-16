@@ -59,7 +59,7 @@ const handleForm = (event) => {
     comment: event.target.comment.value,
   };
 
-  comments.push(formData);
+  comments.unshift(formData);
 
   const commentList = document.querySelector(".conversation__section");
 
@@ -79,6 +79,8 @@ const handleForm = (event) => {
 
 // create comment div
 const createNewComment = () => {
+  const commentImg = document.createElement();
+
   const commentItem = document.createElement("div");
   commentItem.classList.add("form__input");
 
