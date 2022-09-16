@@ -116,20 +116,40 @@ body {
     height: 5rem;
   }
 }
-.navbar__subheader-active {
-  border-bottom: 0.3rem white solid;
+.navbar__subheader {
   width: 50%;
   text-align: center;
-  color: white;
 }
 @media screen and (min-width: 768px) {
-  .navbar__subheader-active {
+  .navbar__subheader {
     width: 25%;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__subheader {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: 500ms ease;
+  }
+  .navbar__subheader :hover {
+    border-bottom: 0.3rem white solid;
+    text-align: center;
+    height: 100%;
+    font-weight: bolder;
+  }
+}
+.navbar__subheader--active {
+  border-bottom: 0.3rem white solid;
+}
+@media screen and (min-width: 768px) {
+  .navbar__subheader--active {
     padding: 1rem 0 1rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__subheader-active {
+  .navbar__subheader--active {
     height: 100%;
     padding-top: 2rem;
     transition: 500ms ease;
@@ -150,38 +170,6 @@ body {
 }
 .navbar__biography :hover, .navbar__shows :hover {
   font-weight: 600;
-}
-.navbar__subheader {
-  width: 50%;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .navbar__subheader {
-    width: 25%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .navbar__subheader {
-    padding: 0;
-    width: 25%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .navbar__subheader {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    transition: 500ms ease;
-  }
-  .navbar__subheader :hover {
-    border-bottom: 0.3rem white solid;
-    text-align: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 100%;
-    font-weight: bolder;
-  }
 }
 
 .media {

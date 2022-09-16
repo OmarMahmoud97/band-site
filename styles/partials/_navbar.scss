@@ -83,23 +83,41 @@
     }
   }
 
-  &__subheader-active {
-    border-bottom: 0.3rem $primarycolor3 solid;
+  &__subheader {
     width: 50%;
     text-align: center;
-    color: $primarycolor3;
 
     @include media-tablet {
       width: 25%;
-      padding: 1rem 0 1rem 0;
+      padding: 0;
     }
 
     @include media-desktop {
-      height: 100%;
-      padding-top: 2rem;
+      width: fit-content;
       transition: 500ms ease;
+      :hover {
+        border-bottom: 0.3rem $primarycolor3 solid;
+        text-align: center;
+        height: 100%;
+        font-weight: bolder;
+      }
+    }
+
+    &--active {
+      border-bottom: 0.3rem $primarycolor3 solid;
+
+      @include media-tablet {
+        padding: 1rem 0 1rem 0;
+      }
+
+      @include media-desktop {
+        height: 100%;
+        padding-top: 2rem;
+        transition: 500ms ease;
+      }
     }
   }
+
   &__biography,
   &__shows {
     color: $primarycolor3;
@@ -114,31 +132,6 @@
     }
     :hover {
       font-weight: 600;
-    }
-  }
-
-  &__subheader {
-    width: 50%;
-    text-align: center;
-    @include media-tablet {
-      width: 25%;
-    }
-
-    @include media-tablet {
-      padding: 0;
-      width: 25%;
-    }
-
-    @include media-desktop {
-      width: fit-content;
-      transition: 500ms ease;
-      :hover {
-        border-bottom: 0.3rem $primarycolor3 solid;
-        text-align: center;
-        width: fit-content;
-        height: 100%;
-        font-weight: bolder;
-      }
     }
   }
 }
