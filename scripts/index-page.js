@@ -83,7 +83,7 @@ const createNewComment = () => {
   commentItem.classList.add("form__input");
 
   const commentName = document.createElement("h5");
-  commentName.classList.add("name__inp8t");
+  commentName.classList.add("name__input");
   commentName.appendChild(commentItem);
 
   const commentInput = document.createElement("p");

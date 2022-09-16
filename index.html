@@ -36,9 +36,11 @@
 
     <header>
       <section class="hero">
-        <section class="hero__section">
-          <h2 class="hero__title">The Bees Knees</h2>
-        </section>
+        <div class="hero__background">
+          <div class="hero__section">
+            <h2 class="hero__title">The Bees Knees</h2>
+          </div>
+        </div>
       </section>
     </header>
     <main class="musicians">
@@ -163,7 +165,7 @@
                   placeholder="Enter your name"
                   name="fullName"
                   id="fullName"
-                  class="name"
+                  class="conversation__fullname"
                   required
                 />
               </div>
@@ -172,7 +174,7 @@
               <div class="conversation__comment">
                 <textarea
                   type="text"
-                  class="comment"
+                  class="conversation__commentbox"
                   name="comment"
                   id="comment"
                   placeholder="Add a new comment"

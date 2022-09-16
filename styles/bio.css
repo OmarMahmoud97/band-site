@@ -224,6 +224,13 @@ body {
     height: 80vh;
   }
 }
+.hero__background {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+}
 .hero__section {
   flex-wrap: wrap;
 }
@@ -696,7 +703,6 @@ body {
 }
 .conversation__name, .conversation__comment, .conversation__btn {
   width: 80%;
-  padding: 0.5rem;
   margin: 0.5rem;
   margin-bottom: 0;
 }
@@ -710,6 +716,15 @@ body {
   font-size: 1.5rem;
   padding: 0.5rem;
 }
-.conversation__name, .conversation__comment {
+.conversation__fullname, .conversation__commentbox {
   width: 100%;
+}
+.conversation__item {
+  width: 80%;
+}
+.conversation__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */

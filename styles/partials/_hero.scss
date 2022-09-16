@@ -14,6 +14,13 @@
   @include hero;
   @include flex-center;
 
+  &__background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#323232, 0.5);
+  }
   &__section {
     flex-wrap: wrap;
     @include media-tablet {
