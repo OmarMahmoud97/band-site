@@ -70,7 +70,7 @@ for (let i = 0; i < showsObject.length; i++) {
   tickets.appendChild(newDiv);
 
   let dateHeader = document.createElement("h4");
-  dateHeader.classList.add("tickets__date-header-mobile");
+  dateHeader.classList.add("tickets__date-header");
   dateHeader.innerText = "Date";
   newDiv.appendChild(dateHeader);
 
@@ -78,6 +78,15 @@ for (let i = 0; i < showsObject.length; i++) {
   ticketDate.classList.add("tickets__date");
   ticketDate.innerText = showsObject[i].date;
   newDiv.appendChild(ticketDate);
+
+  let dateWrapper = document.createElement("div");
+  dateWrapper.classList.add("tickets__date-wrapper");
+  newDiv.appendChild(dateWrapper);
+
+  let ticketDateTablet = document.createElement("p");
+  ticketDateTablet.classList.add("tickets__date-tablet");
+  ticketDateTablet.innerText = showsObject[i].date;
+  dateWrapper.appendChild(ticketDateTablet);
 
   let venueHeader = document.createElement("h4");
   venueHeader.classList.add("tickets__venue-header");
@@ -89,6 +98,19 @@ for (let i = 0; i < showsObject.length; i++) {
   ticketVenue.innerText = showsObject[i].venue;
   newDiv.appendChild(ticketVenue);
 
+  let venueWrapper = document.createElement("div");
+  venueWrapper.classList.add("tickets__venue-wrapper");
+  newDiv.appendChild(venueWrapper);
+
+  let venueTablet = document.createElement("p");
+  venueTablet.classList.add("tickets__venue-tablet");
+  venueTablet.innerText = showsObject[i].venue;
+  venueWrapper.appendChild(venueTablet);
+
+  let ticketVenueWrapper = document.createElement("div");
+  ticketVenueWrapper.classList.add("tickets__venue-wrapper");
+  newDiv.appendChild(ticketVenueWrapper);
+
   let locationHeader = document.createElement("h4");
   locationHeader.classList.add("tickets__location-header");
   locationHeader.innerText = "Location";
@@ -98,6 +120,15 @@ for (let i = 0; i < showsObject.length; i++) {
   ticketLocation.classList.add("tickets__location");
   ticketLocation.innerText = showsObject[i].location;
   newDiv.appendChild(ticketLocation);
+
+  let locationWrapper = document.createElement("div");
+  locationWrapper.classList.add("tickets__location-wrapper");
+  newDiv.appendChild(locationWrapper);
+
+  let locationTablet = document.createElement("p");
+  locationTablet.classList.add("tickets__venue-tablet");
+  locationTablet.innerText = showsObject[i].location;
+  locationWrapper.appendChild(locationTablet);
 
   let ticketBtn = document.createElement("a");
   ticketBtn.classList.add("tickets__btn");

@@ -8,6 +8,7 @@
   @include hero;
   @include flex-center;
   justify-content: space-around;
+  height: 35vh;
 }
 .hero {
   background-image: url(/assets/Images/hero-bio.jpg);
@@ -23,8 +24,9 @@
   }
   &__section {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     @include media-tablet {
       width: 63.75rem;
@@ -33,12 +35,23 @@
     }
   }
 
+  &__media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
   &__title {
+    width: 70%;
     @include font-bold;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     @include flex-center;
     color: $primarycolor3;
-    padding-left: 1.5rem;
+    padding: 1rem 0 1rem 1.5rem;
     @include media-tablet {
       font-size: 2rem;
       width: 40rem;
@@ -66,5 +79,13 @@
       font-size: 1.5rem;
       @include font-bold;
     }
+  }
+
+  &__soundcloud {
+    height: 70px;
+    width: 90%;
+  }
+  &__iframe {
+    height: 100%;
   }
 }

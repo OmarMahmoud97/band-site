@@ -4,25 +4,28 @@
 @use "./mixin" as *;
 
 .tickets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   &__header {
     display: flex;
-    height: 15%;
+    width: 90%;
     align-items: center;
-    .head {
-      @include font-bolder;
-      font-size: 1.5rem;
-    }
-    @include media-tablet {
-      height: 25%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  }
+  &__head {
+    padding-top: 2rem;
+    @include font-bolder;
+    font-size: 1.5rem;
+  }
+  @include media-tablet {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      .head {
-        font-size: 2.5rem;
-        width: 63.75rem;
-      }
-    }
+    font-size: 2.5rem;
+    width: 63.75rem;
   }
 
   &__bookings {
@@ -30,6 +33,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
   }
   &__item {
     display: flex;
@@ -37,7 +41,25 @@
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $secondarycolor2;
+  }
+
+  &__date,
+  &__venue,
+  &__location {
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &__location-tablet,
+  &__venue-tablet,
+  &__date-tablet {
+    display: none;
+    @include media-tablet {
+      display: contents;
+    }
   }
 
   &__date-header,
@@ -46,6 +68,9 @@
     font-size: 1rem;
     color: $primarycolor2;
     padding: 1rem 0;
+    @include media-tablet {
+      display: none;
+    }
   }
 
   &__btn {
@@ -59,6 +84,10 @@
     padding: 0.5rem;
     cursor: pointer;
     margin-top: 1rem;
+    @include media-tablet {
+      width: 20%;
+      font-size: 1.5rem;
+    }
   }
   &__labels {
     width: 100%;

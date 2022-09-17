@@ -4,6 +4,7 @@
 @use "./mixin" as *;
 
 .navbar {
+  padding-top: 1rem;
   background-color: $primarycolor;
   display: flex;
   align-items: center;

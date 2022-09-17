@@ -29,6 +29,7 @@ body {
 }
 
 .navbar {
+  padding-top: 1rem;
   background-color: #323232;
   display: flex;
   align-items: center;
@@ -188,6 +189,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: 35vh;
 }
 @media screen and (min-width: 768px) {
   .media {
@@ -228,8 +230,9 @@ body {
 }
 .hero__section {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -240,15 +243,26 @@ body {
     justify-content: center;
   }
 }
+.hero__media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
 .hero__title {
+  width: 70%;
   font-family: "AvenirNext";
   font-weight: 600;
   font-style: normal;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   color: white;
-  padding-left: 1.5rem;
+  padding: 1rem 0 1rem 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
@@ -284,6 +298,13 @@ body {
     font-weight: 600;
     font-style: normal;
   }
+}
+.hero__soundcloud {
+  height: 70px;
+  width: 90%;
+}
+.hero__iframe {
+  height: 100%;
 }
 
 .musicians {
