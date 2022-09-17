@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <navbar>
       <section class="navbar">
-        <div class="navbar__container">
-          <div class="navbar__header">
-            <div class="navbar__img">
-              <a href="./index.html">
-                <img
-                  class="navbar__logo"
-                  src="./assets/Logo/Logo-bandsite.svg"
-                  alt="Website logo stating bandsite"
-                />
-              </a>
+        <section class="navbar__wrapper">
+          <div class="navbar__container">
+            <div class="navbar__header">
+              <div class="navbar__img">
+                <a href="./index.html">
+                  <img
+                    class="navbar__logo"
+                    src="./assets/Logo/Logo-bandsite.svg"
+                    alt="Website logo stating bandsite"
+                  />
+                </a>
+              </div>
             </div>
+            <ul class="navbar__subheader-container">
+              <li class="navbar__subheader navbar__subheader--active">
+                <a class="navbar__biography" href="./index.html">Biography</a>
+              </li>
+              <li class="navbar__subheader">
+                <a class="navbar__shows" href="./pages/shows.html">Shows</a>
+              </li>
+            </ul>
           </div>
-          <ul class="navbar__subheader-container">
-            <li class="navbar__subheader navbar__subheader--active">
-              <a class="navbar__biography" href="./index.html">Biography</a>
-            </li>
-            <li class="navbar__subheader">
-              <a class="navbar__shows" href="./pages/shows.html">Shows</a>
-            </li>
-          </ul>
-        </div>
+        </section>
       </section>
     </navbar>
 
@@ -158,12 +161,19 @@
     </section>
     <section class="conversation">
       <section class="conversation__wrapper">
-        <div><h3 class="conversation__header">Join the Conversation</h3></div>
         <div>
-          <form class="conversation__form" id="form">
-            <div class="conversation__container">
-              <label class="conversation__label" for="fullName">Name</label>
-
+          <h3 class="conversation__header">Join the Conversation</h3>
+        </div>
+        <div class="conversation__container">
+         <div class="conversation__box">
+           <div class="conversation__form-avatar">
+            <img src="./assets/Images/Mohan-muruge.jpg" alt="img of mohan muruge" class="conversation__img">
+          </div>
+          <div class="conversation__form-wrapper">
+            <form class="conversation__form" id="form">
+              <div class="conversation__label-wrapper">
+                <label class="conversation__label" for="fullName">Name</label>
+              </div>
               <div class="conversation__name">
                 <input
                   type="text"
@@ -174,8 +184,9 @@
                   required
                 />
               </div>
-
-              <label class="conversation__label" for="comment">Comment</label>
+                <div class="conversation__label-wrapper">
+                  <label class="conversation__label" for="comment">Comment</label>
+                </div>
               <div class="conversation__comment">
                 <textarea
                   type="text"
@@ -189,120 +200,122 @@
               <button class="conversation__btn" name="btn" type="submit">
                 Comment
               </button>
-            </div>
-          </form>
-        </div>
-        <div class="conversation__section"></div>
-      </section>
-    </section>
-    <footer>
-      <section class="footer">
-        <div class="footer__wrapper">
-          <div class="footer__header-wrapper">
-            <div class="footer__header-container">
-              <h3 class="footer__header">Get in Touch</h3>
-            </div>
-            <div class="footer__icons">
-              <a href="https://www.instagram.com/" target="_blank"
-                ><img
-                  src="./assets/Icons/SVG/Icon-instagram.svg"
-                  alt="instagram icon"
-                  class="footer__icon"
-              /></a>
-              <a href="https://www.facebook.com/" target="_blank"
-                ><img
-                  src="./assets/Icons/SVG/Icon-facebook.svg"
-                  alt="facebook icon"
-                  class="footer__icon-f"
-              /></a>
-              <a href="https://twitter.com/" target="_blank"
-                ><img
-                  src="./assets/Icons/SVG/Icon-twitter.svg"
-                  alt="twitter icon"
-                  class="footer__icon"
-              /></a>
-            </div>
-            <div class="footer__logo-tablet">
-              <a href="./index.html">
-                <img
-                  src="./assets/Logo/Logo-bandsite.svg"
-                  alt="Logo stating BandSite"
-                />
-              </a>
-            </div>
-          </div>
-
-          <div class="footer__box">
-            <div class="footer__container1">
-              <div class="footer__subheader">
-                <p>Cam Adams</p>
-                <p>The Bees Knees Managment</p>
+            </form>
               </div>
-
-              <div class="footer__add">
-                <div class="footer__address">
-                  <p>503 Broadway Penthouse, New York, NY 10012, USA</p>
+         </div>
+          <div class="conversation__section"></div>
+            </section>
+              </section>
+                  <footer>
+            <section class="footer">
+              <div class="footer__wrapper">
+                <div class="footer__header-wrapper">
+                  <div class="footer__header-container">
+                    <h3 class="footer__header">Get in Touch</h3>
+                  </div>
+                  <div class="footer__icons">
+                    <a href="https://www.instagram.com/" target="_blank"
+                      ><img
+                        src="./assets/Icons/SVG/Icon-instagram.svg"
+                        alt="instagram icon"
+                        class="footer__icon"
+                    /></a>
+                    <a href="https://www.facebook.com/" target="_blank"
+                      ><img
+                        src="./assets/Icons/SVG/Icon-facebook.svg"
+                        alt="facebook icon"
+                        class="footer__icon-f"
+                    /></a>
+                    <a href="https://twitter.com/" target="_blank"
+                      ><img
+                        src="./assets/Icons/SVG/Icon-twitter.svg"
+                        alt="twitter icon"
+                        class="footer__icon"
+                    /></a>
+                  </div>
+                  <div class="footer__logo-tablet">
+                    <a href="./index.html">
+                      <img
+                        src="./assets/Logo/Logo-bandsite.svg"
+                        alt="Logo stating BandSite"
+                      />
+                    </a>
+                  </div>
                 </div>
-                <a class="footer__info" href="mailto:info@thebeesknees.com">
-                  info@thebeesknees.com</a
-                >
-              </div>
-            </div>
 
-            <div class="footer__container2">
-              <div class="footer__subheader">
-                <p>Pearl Gregg Limitless Artist Group</p>
-              </div>
+                <div class="footer__box">
+                  <div class="footer__container1">
+                    <div class="footer__subheader">
+                      <p>Cam Adams</p>
+                      <p>The Bees Knees Managment</p>
+                    </div>
 
-              <div>
-                <p class="footer__agent">
-                  Booking Agent for US / South America / Japan
-                </p>
-                <a
-                  class="footer__pearl"
-                  href="mailto:pearl.gregg@limitlessag.com"
-                >
-                  pearl.gregg@limitlessag.com</a
-                >
-              </div>
-            </div>
+                    <div class="footer__add">
+                      <div class="footer__address">
+                        <p>503 Broadway Penthouse, New York, NY 10012, USA</p>
+                      </div>
+                      <a
+                        class="footer__info"
+                        href="mailto:info@thebeesknees.com"
+                      >
+                        info@thebeesknees.com</a
+                      >
+                    </div>
+                  </div>
 
-            <div class="footer__container3">
-              <div class="footer__subheader">
-                <p>Carson Whyte</p>
-                <p>ARCH Entertainment</p>
-              </div>
-              <div class="footer__text">
-                <div class="text-uk">
-                  <p>Booking Agent for</p>
-                  <p>UK / EU / AU</p>
+                  <div class="footer__container2">
+                    <div class="footer__subheader">
+                      <p>Pearl Gregg Limitless Artist Group</p>
+                    </div>
+
+                    <div>
+                      <p class="footer__agent">
+                        Booking Agent for US / South America / Japan
+                      </p>
+                      <a
+                        class="footer__pearl"
+                        href="mailto:pearl.gregg@limitlessag.com"
+                      >
+                        pearl.gregg@limitlessag.com</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="footer__container3">
+                    <div class="footer__subheader">
+                      <p>Carson Whyte</p>
+                      <p>ARCH Entertainment</p>
+                    </div>
+                    <div class="footer__text">
+                      <div class="text-uk">
+                        <p>Booking Agent for</p>
+                        <p>UK / EU / AU</p>
+                      </div>
+                      <a
+                        class="footer__carson"
+                        href="mailto:cwhyte@archentertainment.com"
+                      >
+                        cwhyte@archentertainment.com</a
+                      >
+                    </div>
+                  </div>
                 </div>
-                <a
-                  class="footer__carson"
-                  href="mailto:cwhyte@archentertainment.com"
-                >
-                  cwhyte@archentertainment.com</a
-                >
-              </div>
-            </div>
-          </div>
 
-          <div>
-            <a href="./index.html">
-              <img
-                class="footer__logo"
-                src="./assets/Logo/Logo-bandsite.svg"
-                alt="Logo stating BandSite"
-              />
-            </a>
-          </div>
-          <div class="footer__copywrite">
-            Copyright The Bees Knees <span>&copy;</span> 2021 All Rights
-            Reserved
-          </div>
-        </div>
-      </section>
-    </footer>
-    <script src="./scripts/index-page.js"></script>
-  </body>
-</html>
+                <div>
+                  <a href="./index.html">
+                    <img
+                      class="footer__logo"
+                      src="./assets/Logo/Logo-bandsite.svg"
+                      alt="Logo stating BandSite"
+                    />
+                  </a>
+                </div>
+                <div class="footer__copywrite">
+                  Copyright The Bees Knees <span>&copy;</span> 2021 All Rights
+                  Reserved
+                </div>
+              </div>
+            </section>
+                      </footer>
+                        </body>
+                          </html>

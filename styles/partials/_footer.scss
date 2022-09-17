@@ -15,7 +15,7 @@
 
   &__wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     @include media-desktop {
       width: 63.75rem;
       align-items: center;

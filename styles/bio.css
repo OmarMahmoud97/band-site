@@ -29,22 +29,29 @@ body {
 }
 
 .navbar {
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__wrapper {
   padding-top: 0.8rem;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .navbar {
+  .navbar__wrapper {
+    width: 100%;
     flex-wrap: nowrap;
-    justify-content: flex-start;
     padding: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar {
+  .navbar__wrapper {
+    width: 63.75rem;
     align-items: center;
     justify-content: center;
     height: 5rem;
@@ -52,6 +59,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .navbar__container {
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -316,6 +324,9 @@ body {
     width: 63.75rem;
   }
 }
+.musicians__head {
+  width: 90%;
+}
 .musicians__header {
   color: #323232;
   font-size: 1.5rem;
@@ -437,7 +448,7 @@ body {
 }
 .footer__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 @media screen and (min-width: 1280px) {
   .footer__wrapper {
@@ -622,7 +633,7 @@ body {
   margin: 0 auto;
 }
 .gallery__wrapper {
-  padding: 2rem 1rem;
+  padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -630,13 +641,16 @@ body {
 }
 @media screen and (min-width: 768px) {
   .gallery__wrapper {
-    width: 63.75rem;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery__wrapper {
     margin: 0;
+    width: 63.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .gallery__title h2 {
@@ -657,17 +671,10 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
-}
-@media screen and (min-width: 1280px) {
-  .gallery__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: 90%;
 }
 .gallery__container {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -702,15 +709,24 @@ body {
 }
 
 .conversation {
-  background-color: #e1e1e1;
+  padding-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.conversation__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 @media screen and (min-width: 1280px) {
   .conversation__wrapper {
     width: 63.75rem;
   }
+}
+.conversation__header-wrapper {
+  width: 90%;
 }
 .conversation__header {
   font-size: 1.5rem;
@@ -719,20 +735,45 @@ body {
 .conversation__container {
   display: flex;
   align-items: flex-start;
-  width: 80%;
+  width: 90%;
   flex-direction: column;
+}
+.conversation__box {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+.conversation__label-wrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+}
+.conversation__label {
+  color: #e1e1e1;
 }
 .conversation__form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px solid #e1e1e1;
-  padding-bottom: 2rem;
   margin-bottom: 1rem;
 }
+.conversation__name {
+  padding-bottom: 1rem;
+}
+.conversation__form-wrapper {
+  width: 100%;
+}
+.conversation__form-avatar {
+  padding-top: 10%;
+}
+.conversation__img {
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
 .conversation__name, .conversation__comment, .conversation__btn {
-  width: 80%;
+  width: 90%;
   margin: 0.5rem;
   margin-bottom: 0;
 }
@@ -743,14 +784,26 @@ body {
   font-family: "AvenirNext";
   font-weight: 600;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.5rem;
 }
 .conversation__fullname, .conversation__commentbox {
   width: 100%;
+  padding: 1rem;
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-style: normal;
+  background-color: #e1e1e1;
+  border: #afafaf 1px solid;
+}
+.conversation__commentbox {
+  height: 6rem;
+}
+.conversation__fullname {
+  height: 2.5rem;
 }
 .conversation__item {
-  width: 80%;
+  width: 90%;
 }
 .conversation__section {
   display: flex;

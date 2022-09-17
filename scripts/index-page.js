@@ -28,20 +28,36 @@ const renderComments = () => {
     newDiv.classList.add("conversation__item");
     commentsEl.appendChild(newDiv);
 
+    const commentBox = document.createElement("div");
+    commentBox.classList.add("comment__avatar");
+    newDiv.appendChild(commentBox);
+
+    const commentInputBox = document.createElement("div");
+    commentInputBox.classList.add("comment__input-box");
+    newDiv.appendChild(commentInputBox);
+
+    const avatar = document.createElement("div");
+    avatar.classList.add("comment__avatar-img");
+    commentBox.appendChild(avatar);
+
+    const commentHeaders = document.createElement("div");
+    commentHeaders.classList.add("comment__headers");
+    commentInputBox.appendChild(commentHeaders);
+
     const nameEl = document.createElement("h5");
     nameEl.classList.add("conversation__name");
     nameEl.innerText = comments[i].name;
-    newDiv.appendChild(nameEl);
+    commentHeaders.appendChild(nameEl);
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("conversation__date");
     dateEl.innerText = comments[i].date;
-    newDiv.appendChild(dateEl);
+    commentHeaders.appendChild(dateEl);
 
     const commentEl = document.createElement("p");
     commentEl.classList.add("conversation__comment");
     commentEl.innerText = comments[i].comment;
-    newDiv.appendChild(commentEl);
+    commentInputBox.appendChild(commentEl);
   }
 };
 

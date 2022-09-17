@@ -4,27 +4,36 @@
 @use "./mixin" as *;
 
 .navbar {
-  padding-top: 0.8rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-wrap: wrap;
   background-color: $primarycolor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @include media-tablet {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 0;
-  }
-
-  @include media-desktop {
+  &__wrapper {
+    padding-top: 0.8rem;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 5rem;
+    flex-wrap: wrap;
+    background-color: $primarycolor;
+
+    @include media-tablet {
+      width: 100%;
+      flex-wrap: nowrap;
+      padding: 0;
+    }
+
+    @include media-desktop {
+      width: 63.75rem;
+      align-items: center;
+      justify-content: center;
+      height: 5rem;
+    }
   }
 
   &__container {
     @include media-tablet {
+      width: 100%;
       display: flex;
       align-items: flex-start;
       justify-content: space-evenly;
