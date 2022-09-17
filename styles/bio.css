@@ -732,11 +732,21 @@ body {
   font-size: 1.5rem;
   padding-bottom: 2rem;
 }
+@media screen and (min-width: 1280px) {
+  .conversation__header {
+    font-size: 2rem;
+  }
+}
 .conversation__container {
   display: flex;
   align-items: flex-start;
   width: 90%;
   flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .conversation__container {
+    max-width: 31.75rem;
+  }
 }
 .conversation__box {
   display: flex;
@@ -765,13 +775,37 @@ body {
 .conversation__name, .conversation__comment {
   width: 90%;
 }
+@media screen and (min-width: 768px) {
+  .conversation__name, .conversation__comment {
+    width: 100%;
+  }
+}
 .conversation__form-avatar {
-  padding-top: 10%;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__form-avatar {
+    margin-right: 1rem;
+    padding-top: 1.5rem;
+  }
 }
 .conversation__img {
   border-radius: 100%;
   width: 2.5rem;
   height: 2.5rem;
+}
+.conversation__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .conversation__btn-wrapper {
+    margin: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 .conversation__btn {
   background-color: #323232;
@@ -784,6 +818,11 @@ body {
   padding: 0.5rem;
   width: 90%;
 }
+@media screen and (min-width: 768px) {
+  .conversation__btn {
+    width: 30%;
+  }
+}
 .conversation__fullname, .conversation__commentbox {
   width: 100%;
   font-family: "AvenirNext";
@@ -792,6 +831,8 @@ body {
   background-color: #e1e1e1;
   border: #afafaf 1px solid;
   padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
 }
 .conversation__commentbox {
   height: 6rem;
@@ -817,8 +858,18 @@ body {
   padding-bottom: 1rem;
   min-width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .conversation__item {
+    justify-content: space-evenly;
+  }
+}
 .conversation__avatar {
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__avatar {
+    padding: 0;
+  }
 }
 .conversation__avatar-img {
   height: 2.5rem;
@@ -826,6 +877,12 @@ body {
   background-color: #afafaf;
   border-radius: 100%;
   padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__avatar-img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .conversation__headers {
   display: flex;
