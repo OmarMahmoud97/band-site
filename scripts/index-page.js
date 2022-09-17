@@ -29,19 +29,19 @@ const renderComments = () => {
     commentsEl.appendChild(newDiv);
 
     const commentBox = document.createElement("div");
-    commentBox.classList.add("comment__avatar");
+    commentBox.classList.add("conversation__avatar");
     newDiv.appendChild(commentBox);
 
     const commentInputBox = document.createElement("div");
-    commentInputBox.classList.add("comment__input-box");
+    commentInputBox.classList.add("conversation__input-box");
     newDiv.appendChild(commentInputBox);
 
     const avatar = document.createElement("div");
-    avatar.classList.add("comment__avatar-img");
+    avatar.classList.add("conversation__avatar-img");
     commentBox.appendChild(avatar);
 
     const commentHeaders = document.createElement("div");
-    commentHeaders.classList.add("comment__headers");
+    commentHeaders.classList.add("conversation__headers");
     commentInputBox.appendChild(commentHeaders);
 
     const nameEl = document.createElement("h5");
