@@ -516,12 +516,21 @@ body {
   font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
+  .tickets__head {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .tickets {
     height: 25%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .tickets {
     width: 63.75rem;
   }
 }
@@ -542,6 +551,12 @@ body {
   border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
+  .tickets__item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
   .tickets__date, .tickets__venue, .tickets__location {
     display: none;
   }
@@ -554,6 +569,11 @@ body {
     display: contents;
   }
 }
+@media screen and (min-width: 768px) {
+  .tickets__date-tablet {
+    font-weight: bold;
+  }
+}
 .tickets__date-header, .tickets__location-header, .tickets__venue-header {
   font-size: 1rem;
   color: #afafaf;
@@ -562,6 +582,24 @@ body {
 @media screen and (min-width: 768px) {
   .tickets__date-header, .tickets__location-header, .tickets__venue-header {
     display: none;
+  }
+}
+.tickets__btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #323232;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .tickets__btn-wrapper {
+    width: 20%;
   }
 }
 .tickets__btn {
@@ -574,22 +612,47 @@ body {
   border-radius: 0.5rem;
   padding: 0.5rem;
   cursor: pointer;
-  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .tickets__btn {
-    width: 20%;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
   }
 }
 .tickets__labels {
-  width: 100%;
+  width: 90%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   display: none;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .tickets__labels {
     display: flex;
   }
+}
+@media screen and (min-width: 768px) {
+  .tickets__date-header-desktop, .tickets__location-header-desktop {
+    font-size: 1rem;
+    width: 25%;
+    color: #afafaf;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tickets__empty-header-desktop, .tickets__venue-header-desktop {
+    width: 20%;
+    font-size: 1rem;
+    color: #afafaf;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tickets__venue-tablet, .tickets__location-tablet, .tickets__date-tablet {
+    font-size: 1rem;
+  }
+}
+.tickets__date-wrapper, .tickets__location-wrapper {
+  width: 25%;
+}
+.tickets__venue-wrapper {
+  width: 20%;
 }/*# sourceMappingURL=shows.css.map */

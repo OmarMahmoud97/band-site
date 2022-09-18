@@ -57,7 +57,7 @@ const buildDesktopLabels = () => {
   desktopLabelWrapper.appendChild(locationHeader);
 
   let emptyDiv = document.createElement("h4");
-  emptyDiv.classList.add("tickets__location-header-desktop");
+  emptyDiv.classList.add("tickets__empty-header-desktop");
   emptyDiv.innerText = "";
   desktopLabelWrapper.appendChild(emptyDiv);
 };
@@ -107,10 +107,6 @@ for (let i = 0; i < showsObject.length; i++) {
   venueTablet.innerText = showsObject[i].venue;
   venueWrapper.appendChild(venueTablet);
 
-  let ticketVenueWrapper = document.createElement("div");
-  ticketVenueWrapper.classList.add("tickets__venue-wrapper");
-  newDiv.appendChild(ticketVenueWrapper);
-
   let locationHeader = document.createElement("h4");
   locationHeader.classList.add("tickets__location-header");
   locationHeader.innerText = "Location";
@@ -130,10 +126,14 @@ for (let i = 0; i < showsObject.length; i++) {
   locationTablet.innerText = showsObject[i].location;
   locationWrapper.appendChild(locationTablet);
 
+  let btnWrapper = document.createElement("div");
+  btnWrapper.classList.add("tickets__btn-wrapper");
+  newDiv.appendChild(btnWrapper);
+
   let ticketBtn = document.createElement("a");
   ticketBtn.classList.add("tickets__btn");
   ticketBtn.setAttribute("href", "https://youtu.be/dQw4w9WgXcQ");
   ticketBtn.target = "_blank";
   ticketBtn.innerText = "BUY TICKETS";
-  newDiv.appendChild(ticketBtn);
+  btnWrapper.appendChild(ticketBtn);
 }
