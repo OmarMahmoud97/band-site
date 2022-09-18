@@ -20,7 +20,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(#323232, 0.5);
+    background-color: rgba($primarycolor, 0.3);
   }
   &__section {
     display: flex;
@@ -33,6 +33,11 @@
       @include flex-center;
       justify-content: center;
     }
+    &--biography {
+      @include media-tablet {
+        align-items: flex-start;
+      }
+    }
   }
 
   &__media {
@@ -40,28 +45,53 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media-desktop {
+      flex-direction: row;
+    }
   }
+
   &__title-wrapper {
     display: flex;
     align-items: flex-start;
+    width: 90%;
+    padding: 1rem 0;
+    @include media-desktop {
+      width: 60%;
+    }
   }
+
   &__title {
     width: 70%;
     @include font-bold;
     font-size: 1.2rem;
     @include flex-center;
     color: $primarycolor3;
-    padding: 1rem 0 1rem 1.5rem;
     @include media-tablet {
       font-size: 2rem;
-      width: 40rem;
+      width: 75%;
       padding: 0;
     }
 
     @include media-desktop {
-      width: 63.75rem;
+      width: 100%;
       font-size: 4rem;
       padding: 0;
+    }
+
+    &--biography {
+      font-size: 1.5rem;
+      width: 100%;
+      @include media-tablet {
+        font-size: 4rem;
+      }
+    }
+  }
+  &__subheader-wrapper {
+    width: 90%;
+    @include media-tablet {
+      align-items: center;
+      justify-content: center;
+      display: flex;
     }
   }
 
@@ -82,8 +112,13 @@
   }
 
   &__soundcloud {
-    height: 70px;
+    height: 100px;
     width: 90%;
+    @include media-desktop {
+      width: 40%;
+      height: 130px;
+      padding-left: 2rem;
+    }
   }
   &__iframe {
     height: 100%;

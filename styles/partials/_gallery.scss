@@ -34,13 +34,12 @@
       font-size: 2rem;
 
       @include media-tablet {
-        width: 100%;
-        padding-left: 1rem;
       }
     }
 
     @include media-desktop {
       font-size: 3rem;
+      width: 100%;
     }
   }
 
@@ -49,6 +48,15 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 90%;
+
+    @include media-tablet {
+      width: 100%;
+      padding-left: 1rem;
+    }
+
+    @include media-desktop {
+      padding-left: 0;
+    }
   }
 
   &__container {
@@ -60,6 +68,7 @@
     padding-bottom: 1rem;
 
     @include media-tablet {
+      width: 100%;
       justify-content: space-evenly;
     }
   }
