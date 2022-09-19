@@ -6,14 +6,12 @@
 .navbar {
   padding-top: 1rem;
   background-color: $primarycolor;
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: center;
 
   &__wrapper {
     padding-top: 0.8rem;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-wrap: wrap;
     background-color: $primarycolor;
@@ -26,7 +24,6 @@
 
     @include media-desktop {
       width: 63.75rem;
-      align-items: center;
       justify-content: center;
       height: 5rem;
     }
@@ -39,6 +36,7 @@
       align-items: flex-start;
       justify-content: space-evenly;
     }
+
     @include media-tablet {
       width: 90%;
       justify-content: flex-start;
@@ -84,12 +82,16 @@
     @include flex-evenly;
     color: $primarycolor3;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     @include media-tablet {
       width: 40vw;
     }
 
     @include media-desktop {
+      padding-left: 3rem;
       width: 20vw;
       height: 5rem;
     }
@@ -98,25 +100,27 @@
   &__subheader {
     width: 50%;
     text-align: center;
-
-    @include media-tablet {
-      width: 25%;
-      padding: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include media-desktop {
-      width: fit-content;
       transition: 500ms ease;
+      height: 100%;
+      padding-top: 2rem;
       :hover {
-        border-bottom: 0.3rem $primarycolor3 solid;
-        text-align: center;
-        height: 100%;
-        font-weight: bolder;
+        width: 49%;
+        border-bottom: white solid 5px;
+        @include font-bolder;
       }
     }
 
     &--active {
       border-bottom: 0.3rem $primarycolor3 solid;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @include media-tablet {
         padding: 1rem 0 1rem 0;
@@ -134,16 +138,14 @@
   &__shows {
     color: $primarycolor3;
     text-decoration: none;
-    width: 100%;
     display: block;
     height: 100%;
     padding-top: 1rem;
+    width: 100%;
+    text-align: center;
 
     @include media-tablet {
       padding: 0;
-    }
-    :hover {
-      font-weight: 600;
     }
   }
 }

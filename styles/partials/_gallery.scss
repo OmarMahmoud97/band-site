@@ -5,22 +5,21 @@
 
 .gallery {
   background-color: $secondarycolor3;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin: 0 auto;
 
   &__wrapper {
+    @include flex-center;
     padding: 1rem 0rem;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
     @include media-tablet {
       margin: 0 auto;
     }
+
     @include media-desktop {
       margin: 0;
       width: 63.75rem;
@@ -72,6 +71,7 @@
       justify-content: space-evenly;
     }
   }
+
   &__img {
     width: 100%;
     margin-top: 1rem;

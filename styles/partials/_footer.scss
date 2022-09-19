@@ -16,6 +16,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+
     @include media-desktop {
       width: 63.75rem;
       align-items: center;
@@ -49,6 +50,7 @@
       padding: 1rem 4rem 0 0;
       font-size: 2rem;
     }
+
     @include media-desktop {
       width: fit-content;
     }
@@ -66,19 +68,23 @@
       width: 20%;
     }
   }
+
   &__icon {
     width: 1.5rem;
   }
+
   &__icon-f {
     height: 1.5rem;
     padding: 0 2rem;
   }
+
   &__box {
     @include media-tablet {
       @include flex-center;
       flex-direction: row;
       justify-content: center;
     }
+
     @include media-desktop {
       justify-content: flex-start;
       width: 68rem;
@@ -120,6 +126,7 @@
   &__add {
     padding-top: 1rem;
   }
+
   &__address {
     @include media-tablet {
       padding-bottom: 1rem;
@@ -168,6 +175,7 @@
       }
     }
   }
+
   &__info,
   &__carson,
   &__pearl {
@@ -177,6 +185,7 @@
   &__copywrite {
     font-size: 0.9rem;
     padding-top: 2rem;
+
     @include media-desktop {
       width: 68rem;
     }

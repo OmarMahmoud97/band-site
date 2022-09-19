@@ -4,15 +4,13 @@
 @use "./mixin" as *;
 
 .tickets {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: center;
   flex-direction: column;
 
   @include media-tablet {
     height: 25%;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: space-evenly;
     font-size: 2.5rem;
   }
@@ -23,19 +21,18 @@
 
   &__wrapper {
     width: 100%;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-direction: column;
+
     @include media-desktop {
       max-width: 63.75rem;
     }
   }
 
   &__header {
-    display: flex;
+    @include flex-center;
     width: 90%;
-    align-items: center;
   }
 
   &__head {
@@ -43,14 +40,14 @@
     padding: 2rem 0 0 0;
     @include font-bolder;
     font-size: 1.5rem;
+
     @include media-tablet {
       font-size: 2rem;
     }
   }
 
   &__bookings {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -64,6 +61,7 @@
     width: 90%;
     padding: 1rem 0;
     border-bottom: 1px solid $secondarycolor2;
+
     @include media-tablet {
       flex-direction: row;
       justify-content: space-between;
@@ -82,6 +80,7 @@
   &__venue-tablet,
   &__date-tablet {
     display: none;
+
     @include media-tablet {
       display: contents;
     }
@@ -92,6 +91,7 @@
       font-weight: bold;
     }
   }
+
   &__date-header,
   &__location-header,
   &__venue-header {
@@ -128,6 +128,7 @@
       width: 20%;
     }
   }
+
   &__btn {
     background-color: $primarycolor;
     color: $primarycolor3;
@@ -137,7 +138,6 @@
     margin: 0 auto;
     border-radius: 0.5rem;
     padding: 0.5rem;
-
     cursor: pointer;
 
     @include media-tablet {

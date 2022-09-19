@@ -10,6 +10,7 @@
   justify-content: space-around;
   height: 35vh;
 }
+
 .hero {
   background-image: url(/assets/Images/hero-bio.jpg);
   @include hero;
@@ -22,9 +23,9 @@
     height: 100%;
     background-color: rgba($primarycolor, 0.3);
   }
+
   &__section {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -33,6 +34,7 @@
       @include flex-center;
       justify-content: center;
     }
+
     &--biography {
       @include media-tablet {
         align-items: flex-start;
@@ -41,10 +43,10 @@
   }
 
   &__media {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    @include flex-center;
+
     @include media-desktop {
       flex-direction: row;
     }
@@ -82,10 +84,12 @@
       font-size: 1.5rem;
       width: 100%;
       @include media-tablet {
+        width: 90%;
         font-size: 4rem;
       }
     }
   }
+
   &__subheader-wrapper {
     width: 90%;
     @include media-tablet {
@@ -120,6 +124,7 @@
       padding-left: 2rem;
     }
   }
+
   &__iframe {
     height: 100%;
   }

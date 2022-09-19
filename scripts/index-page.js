@@ -65,6 +65,7 @@ renderComments();
 
 let now = new Date();
 console.log(now);
+
 // form handling
 const handleForm = (event) => {
   event.preventDefault();
@@ -81,12 +82,8 @@ const handleForm = (event) => {
 
   console.log(commentList);
 
-  // Remove all the comments from the page (to prevent any dupes)
   commentList.innerHTML = "";
 
-  // Now that we've pushed the new comment Obj to the comments arr
-  // Re-run the renderComments function, which will render the comments on the page
-  // With the updated comments array
   renderComments();
 
   event.target.fullName.value = "";
