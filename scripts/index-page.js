@@ -1,24 +1,15 @@
 // creating an array of the pre-made comments
-const comments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    date: " 12/20/2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+let comments = [];
+
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335"
+  )
+  .then((response) => {
+    console.log(response);
+    comments = response.data;
+    renderComments();
+  });
 
 const renderComments = () => {
   const commentsEl = document.querySelector(".conversation__section");
@@ -51,7 +42,7 @@ const renderComments = () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("conversation__date");
-    dateEl.innerText = comments[i].date;
+    dateEl.innerText = comments[i].timestamp;
     commentHeaders.appendChild(dateEl);
 
     const commentEl = document.createElement("p");
@@ -61,7 +52,7 @@ const renderComments = () => {
   }
 };
 
-renderComments();
+// renderComments();
 
 let now = new Date();
 console.log(now);
