@@ -48,6 +48,7 @@
     width: 100%;
     border-bottom: 1px solid $secondarycolor2;
     margin-bottom: 1rem;
+    justify-content: space-between;
   }
 
   &__label-wrapper {
@@ -79,21 +80,21 @@
   }
 
   &__form-wrapper {
-    width: 100%;
-  }
-
-  &__name,
-  &__comment {
+    width: 80%;
     @include media-tablet {
       width: 100%;
     }
   }
 
+  &__name,
+  &__comment {
+    width: 100%;
+  }
+
   &__form-avatar {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     @include media-tablet {
       margin-right: 1rem;
-      padding-top: 1.5rem;
     }
   }
 
@@ -101,12 +102,13 @@
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;
+    object-fit: cover;
   }
 
   &__btn-wrapper {
     @include flex-center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     @include media-tablet {
       margin: 1rem;
       align-items: flex-end;
@@ -115,23 +117,25 @@
   }
 
   &__btn {
+    text-align: center;
     background-color: $primarycolor;
     color: $secondarycolor3;
     border-radius: 0.5rem;
     @include font-bold;
     font-size: 1rem;
-    padding: 0.5rem;
-    width: 90%;
+    padding: 0.5rem 2rem;
+    width: 100%;
 
     @include media-tablet {
       width: 30%;
     }
   }
+
   &__fullname,
   &__commentbox {
     width: 100%;
     @include font-normal;
-    background-color: $secondarycolor2;
+    background-color: $secondarycolor3;
     border: $primarycolor2 1px solid;
     padding: 0.5rem;
     border-radius: 0.5rem;

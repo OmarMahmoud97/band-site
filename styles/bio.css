@@ -833,6 +833,7 @@ body {
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 1rem;
+  justify-content: space-between;
 }
 .conversation__label-wrapper {
   display: flex;
@@ -864,32 +865,36 @@ body {
   margin-bottom: 1rem;
 }
 .conversation__form-wrapper {
-  width: 100%;
+  width: 80%;
 }
 @media screen and (min-width: 768px) {
-  .conversation__name, .conversation__comment {
+  .conversation__form-wrapper {
     width: 100%;
   }
 }
+.conversation__name, .conversation__comment {
+  width: 100%;
+}
 .conversation__form-avatar {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__form-avatar {
     margin-right: 1rem;
-    padding-top: 1.5rem;
   }
 }
 .conversation__img {
   border-radius: 100%;
   width: 2.5rem;
   height: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .conversation__btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .conversation__btn-wrapper {
@@ -899,6 +904,7 @@ body {
   }
 }
 .conversation__btn {
+  text-align: center;
   background-color: #323232;
   color: #fafafa;
   border-radius: 0.5rem;
@@ -906,8 +912,8 @@ body {
   font-weight: 600;
   font-style: normal;
   font-size: 1rem;
-  padding: 0.5rem;
-  width: 90%;
+  padding: 0.5rem 2rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .conversation__btn {
@@ -919,7 +925,7 @@ body {
   font-family: "AvenirNext";
   font-weight: 400;
   font-style: normal;
-  background-color: #e1e1e1;
+  background-color: #fafafa;
   border: #afafaf 1px solid;
   padding: 0.5rem;
   border-radius: 0.5rem;

@@ -19,7 +19,7 @@ const renderComments = () => {
   const commentsEl = document.querySelector(".conversation__section");
 
   for (let i = 0; i < comments.length; i++) {
-    const newDiv = document.createElement("div");
+    const newDiv = document.createElement("article");
     newDiv.classList.add("conversation__item");
     commentsEl.appendChild(newDiv);
 
@@ -85,15 +85,12 @@ const handleForm = (event) => {
       comments = response.data;
       commentList.innerHTML = null;
       getCommentAPI();
+      event.target.reset();
     });
 
   const commentList = document.querySelector(".conversation__section");
 
   console.log(commentList);
-
-  // commentList.reset();
-  event.target.fullName.value = "";
-  event.target.comment.value = "";
 };
 
 // create comment div

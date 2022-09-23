@@ -1,4 +1,4 @@
-let showsObject = [];
+let showsArray = [];
 
 axios
   .get(
@@ -6,7 +6,7 @@ axios
   )
   .then((response) => {
     console.log(response.data);
-    showsObject = response.data;
+    showsArray = response.data;
     buildTickets();
   });
 
@@ -68,7 +68,7 @@ const formatDate = (timestamp) => {
 const buildTickets = () => {
   const showsItem = document.querySelector(".tickets");
 
-  for (let i = 0; i < showsObject.length; i++) {
+  for (let i = 0; i < showsArray.length; i++) {
     let newDiv = document.createElement("div");
     newDiv.classList.add("tickets__item");
     showsItem.appendChild(newDiv);
@@ -80,7 +80,7 @@ const buildTickets = () => {
 
     let ticketDate = document.createElement("p");
     ticketDate.classList.add("tickets__date");
-    ticketDate.innerText = formatDate(showsObject[i].date);
+    ticketDate.innerText = formatDate(showsArray[i].date);
     newDiv.appendChild(ticketDate);
 
     let dateWrapper = document.createElement("div");
@@ -89,7 +89,7 @@ const buildTickets = () => {
 
     let ticketDateTablet = document.createElement("p");
     ticketDateTablet.classList.add("tickets__date-tablet");
-    ticketDateTablet.innerText = formatDate(showsObject[i].date);
+    ticketDateTablet.innerText = formatDate(showsArray[i].date);
     dateWrapper.appendChild(ticketDateTablet);
 
     let venueHeader = document.createElement("h4");
@@ -99,7 +99,7 @@ const buildTickets = () => {
 
     let ticketVenue = document.createElement("p");
     ticketVenue.classList.add("tickets__venue");
-    ticketVenue.innerText = showsObject[i].place;
+    ticketVenue.innerText = showsArray[i].place;
     newDiv.appendChild(ticketVenue);
 
     let venueWrapper = document.createElement("div");
@@ -108,7 +108,7 @@ const buildTickets = () => {
 
     let venueTablet = document.createElement("p");
     venueTablet.classList.add("tickets__venue-tablet");
-    venueTablet.innerText = showsObject[i].place;
+    venueTablet.innerText = showsArray[i].place;
     venueWrapper.appendChild(venueTablet);
 
     let locationHeader = document.createElement("h4");
@@ -118,7 +118,7 @@ const buildTickets = () => {
 
     let ticketLocation = document.createElement("p");
     ticketLocation.classList.add("tickets__location");
-    ticketLocation.innerText = showsObject[i].location;
+    ticketLocation.innerText = showsArray[i].location;
     newDiv.appendChild(ticketLocation);
 
     let locationWrapper = document.createElement("div");
@@ -127,7 +127,7 @@ const buildTickets = () => {
 
     let locationTablet = document.createElement("p");
     locationTablet.classList.add("tickets__venue-tablet");
-    locationTablet.innerText = showsObject[i].location;
+    locationTablet.innerText = showsArray[i].location;
     locationWrapper.appendChild(locationTablet);
 
     let btnWrapper = document.createElement("div");
