@@ -1,15 +1,19 @@
 // creating an array of the pre-made comments
 let comments = [];
+const getCommentAPI = () => {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335"
+    )
+    .then((response) => {
+      console.log(response);
+      comments = response.data;
+      comments.sort((a, b) => (a.timestamp < b.timestamp ? 1 : -1));
+      renderComments();
+    });
+};
 
-axios
-  .get(
-    "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335"
-  )
-  .then((response) => {
-    console.log(response);
-    comments = response.data;
-    renderComments();
-  });
+getCommentAPI();
 
 const renderComments = () => {
   const commentsEl = document.querySelector(".conversation__section");
@@ -42,7 +46,14 @@ const renderComments = () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("conversation__date");
-    dateEl.innerText = comments[i].timestamp;
+    dateEl.innerText = new Date(comments[i].timestamp).toLocaleDateString(
+      "en-US",
+      {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }
+    );
     commentHeaders.appendChild(dateEl);
 
     const commentEl = document.createElement("p");
@@ -61,22 +72,26 @@ console.log(now);
 const handleForm = (event) => {
   event.preventDefault();
 
-  const formData = {
-    name: event.target.fullName.value,
-    date: new Date().toLocaleDateString(),
-    comment: event.target.comment.value,
-  };
-
-  comments.unshift(formData);
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335",
+      {
+        name: event.target.fullName.value,
+        comment: event.target.comment.value,
+      }
+    )
+    .then((response) => {
+      console.log(response);
+      comments = response.data;
+      commentList.innerHTML = null;
+      getCommentAPI();
+    });
 
   const commentList = document.querySelector(".conversation__section");
 
   console.log(commentList);
 
-  commentList.innerHTML = "";
-
-  renderComments();
-
+  // commentList.reset();
   event.target.fullName.value = "";
   event.target.comment.value = "";
 };

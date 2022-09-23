@@ -847,7 +847,16 @@ body {
 .conversation__label {
   color: #e1e1e1;
 }
+.conversation__date {
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .conversation__date {
+    width: 8rem;
+  }
+}
 .conversation__form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

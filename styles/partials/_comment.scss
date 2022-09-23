@@ -63,7 +63,15 @@
     color: $secondarycolor2;
   }
 
+  &__date {
+    color: $primarycolor;
+    @include media-tablet {
+      width: 8rem;
+    }
+  }
+
   &__form {
+    width: 100%;
     @include flex-center;
     justify-content: center;
     flex-direction: column;
