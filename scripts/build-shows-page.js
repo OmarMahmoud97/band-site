@@ -60,6 +60,11 @@ const buildDesktopLabels = () => {
 
 buildDesktopLabels();
 
+const formatDate = (timestamp) => {
+  const formatedDate = new Date(timestamp).toDateString();
+  return formatedDate;
+};
+
 const buildTickets = () => {
   const showsItem = document.querySelector(".tickets");
 
@@ -75,7 +80,7 @@ const buildTickets = () => {
 
     let ticketDate = document.createElement("p");
     ticketDate.classList.add("tickets__date");
-    ticketDate.innerText = showsObject[i].date;
+    ticketDate.innerText = formatDate(showsObject[i].date);
     newDiv.appendChild(ticketDate);
 
     let dateWrapper = document.createElement("div");
@@ -84,7 +89,7 @@ const buildTickets = () => {
 
     let ticketDateTablet = document.createElement("p");
     ticketDateTablet.classList.add("tickets__date-tablet");
-    ticketDateTablet.innerText = showsObject[i].date;
+    ticketDateTablet.innerText = formatDate(showsObject[i].date);
     dateWrapper.appendChild(ticketDateTablet);
 
     let venueHeader = document.createElement("h4");
