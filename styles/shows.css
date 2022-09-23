@@ -411,6 +411,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__header {
+    padding: 1rem 2rem 0 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -574,11 +575,6 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-@media screen and (min-width: 1280px) {
-  .tickets__wrapper {
-    max-width: 63.75rem;
-  }
-}
 .tickets__header {
   display: flex;
   align-items: center;
@@ -715,6 +711,7 @@ body {
     width: 20%;
     font-size: 1rem;
     color: #afafaf;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 768px) {

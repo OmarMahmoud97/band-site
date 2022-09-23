@@ -24,10 +24,6 @@
     @include flex-center;
     justify-content: center;
     flex-direction: column;
-
-    @include media-desktop {
-      max-width: 63.75rem;
-    }
   }
 
   &__header {
@@ -174,6 +170,7 @@
       width: 20%;
       font-size: 1rem;
       color: $primarycolor2;
+      padding-top: 1rem;
     }
   }
 

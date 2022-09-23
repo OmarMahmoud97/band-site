@@ -52,6 +52,7 @@
     }
 
     @include media-desktop {
+      padding: 1rem 2rem 0 0;
       width: fit-content;
     }
   }
