@@ -250,9 +250,14 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
-  .hero__section--biography {
+@media screen and (min-width: 1280px) {
+  .hero__section {
     align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title-container {
+    display: flex;
   }
 }
 .hero__media {
@@ -261,9 +266,10 @@ body {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .hero__media {
-    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
   }
 }
 .hero__title-wrapper {
@@ -319,6 +325,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    width: 100%;
   }
 }
 .hero__subheader {
@@ -330,7 +337,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__subheader {
-    width: 40rem;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {

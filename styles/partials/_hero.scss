@@ -34,11 +34,14 @@
       @include flex-center;
       justify-content: center;
     }
+    @include media-desktop {
+      align-items: flex-start;
+    }
+  }
 
-    &--biography {
-      @include media-tablet {
-        align-items: flex-start;
-      }
+  &__title-container {
+    @include media-desktop {
+      display: flex;
     }
   }
 
@@ -47,8 +50,9 @@
     justify-content: center;
     @include flex-center;
 
-    @include media-desktop {
-      flex-direction: row;
+    @include media-tablet {
+      width: 90%;
+      align-items: flex-start;
     }
   }
 
@@ -96,6 +100,7 @@
       align-items: center;
       justify-content: center;
       display: flex;
+      width: 100%;
     }
   }
 
@@ -104,9 +109,8 @@
     margin: 0;
     @include flex-center;
     width: 85%;
-    // padding-bottom: 1.5rem;
     @include media-tablet {
-      width: 40rem;
+      width: 100%;
     }
     @include media-desktop {
       width: 63.75rem;
