@@ -928,7 +928,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .conversation__btn {
-    width: 30%;
+    width: 35%;
   }
 }
 .conversation__fullname, .conversation__commentbox {
