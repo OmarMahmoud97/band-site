@@ -309,11 +309,10 @@ body {
 }
 .hero__title--biography {
   font-size: 1.5rem;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .hero__title--biography {
-    width: 90%;
     font-size: 4rem;
   }
 }

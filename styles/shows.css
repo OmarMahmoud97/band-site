@@ -309,11 +309,10 @@ body {
 }
 .hero__title--biography {
   font-size: 1.5rem;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .hero__title--biography {
-    width: 90%;
     font-size: 4rem;
   }
 }
@@ -573,9 +572,36 @@ body {
 @media screen and (min-width: 1280px) {
   .tickets {
     width: 100%;
+    flex-direction: row;
+  }
+}
+.tickets__Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__Container {
+    flex-direction: row;
+    width: 63.75rem;
   }
 }
 .tickets__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__wrapper {
+    width: 20%;
+    height: 36rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.tickets__item-wrapper {
   width: 100%;
   display: flex;
   align-items: center;
@@ -586,6 +612,13 @@ body {
   display: flex;
   align-items: center;
   width: 90%;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .tickets__head {
   font-weight: 700;
@@ -607,6 +640,16 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.tickets__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.tickets__list article:hover {
+  background-color: #fafafa;
+}
 .tickets__item {
   display: flex;
   align-items: flex-start;
@@ -621,6 +664,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.tickets__item--active {
+  background-color: #e1e1e1;
+}
+.tickets .tickets__item--active,
+.tickets .tickets__item--active:hover {
+  background-color: #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .tickets__date, .tickets__venue, .tickets__location {
@@ -674,6 +724,11 @@ body {
 @media screen and (min-width: 768px) {
   .tickets__btn-wrapper {
     width: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .tickets__btn-wrapper {
+    margin-top: 0.5rem;
   }
 }
 .tickets__btn {

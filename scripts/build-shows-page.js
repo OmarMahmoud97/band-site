@@ -10,11 +10,25 @@ axios
     buildTickets();
   });
 
+let activeArticle;
+
+const setActiveArticle = (articleToSet) => {
+  if (activeArticle) {
+    activeArticle.classList.remove("tickets__item--active");
+  }
+  articleToSet.classList.add("tickets__item--active");
+  activeArticle = articleToSet;
+};
+
 let ticketSection = document.querySelector(".tickets");
+
+let ticketContainer = document.createElement("div");
+ticketContainer.classList.add("tickets__Container");
+ticketSection.appendChild(ticketContainer);
 
 let ticketWrapper = document.createElement("div");
 ticketWrapper.classList.add("tickets__wrapper");
-ticketSection.appendChild(ticketWrapper);
+ticketContainer.appendChild(ticketWrapper);
 
 let ticketHeader = document.createElement("div");
 ticketHeader.classList.add("tickets__header");
@@ -25,9 +39,17 @@ ticketHead.classList.add("tickets__head");
 ticketHead.innerText = "Shows";
 ticketHeader.appendChild(ticketHead);
 
+let ticketItemWrapper = document.createElement("div");
+ticketItemWrapper.classList.add("tickets__item-wrapper");
+ticketContainer.appendChild(ticketItemWrapper);
+
 let ticketBooking = document.createElement("div");
 ticketBooking.classList.add("tickets__bookings");
-ticketWrapper.appendChild(ticketBooking);
+ticketItemWrapper.appendChild(ticketBooking);
+
+let ticketList = document.createElement("div");
+ticketList.classList.add("tickets__list");
+ticketItemWrapper.appendChild(ticketList);
 
 // Desktop labels
 const buildDesktopLabels = () => {
@@ -69,9 +91,9 @@ const buildTickets = () => {
   const showsItem = document.querySelector(".tickets");
 
   for (let i = 0; i < showsArray.length; i++) {
-    let newDiv = document.createElement("div");
+    let newDiv = document.createElement("article");
     newDiv.classList.add("tickets__item");
-    showsItem.appendChild(newDiv);
+    ticketList.appendChild(newDiv);
 
     let dateHeader = document.createElement("h4");
     dateHeader.classList.add("tickets__date-header");
@@ -140,5 +162,7 @@ const buildTickets = () => {
     ticketBtn.target = "_blank";
     ticketBtn.innerText = "BUY TICKETS";
     btnWrapper.appendChild(ticketBtn);
+
+    newDiv.onclick = () => setActiveArticle(newDiv);
   }
 };

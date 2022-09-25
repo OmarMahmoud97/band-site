@@ -17,6 +17,18 @@
 
   @include media-desktop {
     width: 100%;
+    flex-direction: row;
+  }
+
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include media-desktop {
+      flex-direction: row;
+      width: 63.75rem;
+    }
   }
 
   &__wrapper {
@@ -24,11 +36,30 @@
     @include flex-center;
     justify-content: center;
     flex-direction: column;
+    @include media-desktop {
+      width: 20%;
+      height: 36rem;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__item-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   &__header {
     @include flex-center;
     width: 90%;
+    @include media-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__head {
@@ -49,6 +80,22 @@
     width: 100%;
   }
 
+  &__list {
+    @include flex-center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__list article:hover {
+    background-color: $secondarycolor3;
+  }
+
+  //   .highlighted-card,
+  // .highlighted-card:hover {
+  //   background-color: $brand-quinary;
+  // }
+
   &__item {
     display: flex;
     align-items: flex-start;
@@ -62,6 +109,14 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    &--active {
+      background-color: $secondarycolor2;
+    }
+  }
+
+  .tickets__item--active,
+  .tickets__item--active:hover {
+    background-color: $secondarycolor2;
   }
 
   &__date,
@@ -122,6 +177,10 @@
 
     @include media-tablet {
       width: 20%;
+    }
+
+    @include media-desktop {
+      margin-top: 0.5rem;
     }
   }
 
