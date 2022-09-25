@@ -34,11 +34,16 @@
       @include flex-center;
       justify-content: center;
     }
+    @include media-desktop {
+      align-items: flex-start;
+    }
+  }
 
-    &--biography {
-      @include media-tablet {
-        align-items: flex-start;
-      }
+  &__title-container {
+    width: 90%;
+    @include media-desktop {
+      width: 100%;
+      display: flex;
     }
   }
 
@@ -47,8 +52,9 @@
     justify-content: center;
     @include flex-center;
 
-    @include media-desktop {
-      flex-direction: row;
+    @include media-tablet {
+      width: 90%;
+      align-items: flex-start;
     }
   }
 
@@ -76,15 +82,14 @@
 
     @include media-desktop {
       width: 100%;
-      font-size: 4rem;
+      font-size: 3.3rem;
       padding: 0;
     }
 
     &--biography {
       font-size: 1.5rem;
-      width: 100%;
+      width: 90%;
       @include media-tablet {
-        width: 90%;
         font-size: 4rem;
       }
     }
@@ -96,6 +101,7 @@
       align-items: center;
       justify-content: center;
       display: flex;
+      width: 100%;
     }
   }
 
@@ -104,9 +110,8 @@
     margin: 0;
     @include flex-center;
     width: 85%;
-    // padding-bottom: 1.5rem;
     @include media-tablet {
-      width: 40rem;
+      width: 100%;
     }
     @include media-desktop {
       width: 63.75rem;

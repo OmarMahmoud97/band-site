@@ -32,7 +32,7 @@
     }
 
     @include media-desktop {
-      width: 68rem;
+      width: 63.75rem;
     }
   }
 
@@ -48,10 +48,11 @@
     @include media-tablet {
       width: 100%;
       padding: 1rem 4rem 0 0;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     @include media-desktop {
+      padding: 1rem 2rem 0 0;
       width: fit-content;
     }
   }
@@ -87,7 +88,7 @@
 
     @include media-desktop {
       justify-content: flex-start;
-      width: 68rem;
+      width: 63.75rem;
     }
   }
 
@@ -104,6 +105,7 @@
   &__container2 {
     @include media-tablet {
       width: 33%;
+      margin: 0 1rem;
     }
 
     @include media-desktop {
@@ -114,7 +116,6 @@
 
   &__container3 {
     @include media-tablet {
-      // padding: 1rem;
       width: 33%;
     }
 
@@ -187,7 +188,7 @@
     padding-top: 2rem;
 
     @include media-desktop {
-      width: 68rem;
+      width: 63.75rem;
     }
   }
 }

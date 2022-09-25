@@ -250,9 +250,18 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
-  .hero__section--biography {
+@media screen and (min-width: 1280px) {
+  .hero__section {
     align-items: flex-start;
+  }
+}
+.hero__title-container {
+  width: 90%;
+}
+@media screen and (min-width: 1280px) {
+  .hero__title-container {
+    width: 100%;
+    display: flex;
   }
 }
 .hero__media {
@@ -261,9 +270,10 @@ body {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .hero__media {
-    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
   }
 }
 .hero__title-wrapper {
@@ -297,17 +307,16 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__title {
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.3rem;
     padding: 0;
   }
 }
 .hero__title--biography {
   font-size: 1.5rem;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .hero__title--biography {
-    width: 90%;
     font-size: 4rem;
   }
 }
@@ -319,6 +328,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    width: 100%;
   }
 }
 .hero__subheader {
@@ -330,7 +340,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__subheader {
-    width: 40rem;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -535,7 +545,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__header-wrapper {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -552,11 +562,12 @@ body {
   .footer__header {
     width: 100%;
     padding: 1rem 4rem 0 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__header {
+    padding: 1rem 2rem 0 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -594,7 +605,7 @@ body {
 @media screen and (min-width: 1280px) {
   .footer__box {
     justify-content: flex-start;
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -610,6 +621,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__container2 {
     width: 33%;
+    margin: 0 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -689,7 +701,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__copywrite {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 
@@ -832,6 +844,7 @@ body {
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 1rem;
+  justify-content: space-between;
 }
 .conversation__label-wrapper {
   display: flex;
@@ -846,7 +859,16 @@ body {
 .conversation__label {
   color: #e1e1e1;
 }
+.conversation__date {
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .conversation__date {
+    width: 8rem;
+  }
+}
 .conversation__form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -854,32 +876,36 @@ body {
   margin-bottom: 1rem;
 }
 .conversation__form-wrapper {
-  width: 100%;
+  width: 80%;
 }
 @media screen and (min-width: 768px) {
-  .conversation__name, .conversation__comment {
+  .conversation__form-wrapper {
     width: 100%;
   }
 }
+.conversation__name, .conversation__comment {
+  width: 100%;
+}
 .conversation__form-avatar {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__form-avatar {
     margin-right: 1rem;
-    padding-top: 1.5rem;
   }
 }
 .conversation__img {
   border-radius: 100%;
   width: 2.5rem;
   height: 2.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .conversation__btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .conversation__btn-wrapper {
@@ -889,6 +915,7 @@ body {
   }
 }
 .conversation__btn {
+  text-align: center;
   background-color: #323232;
   color: #fafafa;
   border-radius: 0.5rem;
@@ -896,8 +923,8 @@ body {
   font-weight: 600;
   font-style: normal;
   font-size: 1rem;
-  padding: 0.5rem;
-  width: 90%;
+  padding: 0.5rem 2rem;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .conversation__btn {
@@ -909,7 +936,7 @@ body {
   font-family: "AvenirNext";
   font-weight: 400;
   font-style: normal;
-  background-color: #e1e1e1;
+  background-color: #fafafa;
   border: #afafaf 1px solid;
   padding: 0.5rem;
   border-radius: 0.5rem;

@@ -250,9 +250,18 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
-  .hero__section--biography {
+@media screen and (min-width: 1280px) {
+  .hero__section {
     align-items: flex-start;
+  }
+}
+.hero__title-container {
+  width: 90%;
+}
+@media screen and (min-width: 1280px) {
+  .hero__title-container {
+    width: 100%;
+    display: flex;
   }
 }
 .hero__media {
@@ -261,9 +270,10 @@ body {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .hero__media {
-    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
   }
 }
 .hero__title-wrapper {
@@ -297,17 +307,16 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__title {
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.3rem;
     padding: 0;
   }
 }
 .hero__title--biography {
   font-size: 1.5rem;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .hero__title--biography {
-    width: 90%;
     font-size: 4rem;
   }
 }
@@ -319,6 +328,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    width: 100%;
   }
 }
 .hero__subheader {
@@ -330,7 +340,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__subheader {
-    width: 40rem;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -389,7 +399,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__header-wrapper {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -406,11 +416,12 @@ body {
   .footer__header {
     width: 100%;
     padding: 1rem 4rem 0 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__header {
+    padding: 1rem 2rem 0 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -448,7 +459,7 @@ body {
 @media screen and (min-width: 1280px) {
   .footer__box {
     justify-content: flex-start;
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -464,6 +475,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__container2 {
     width: 33%;
+    margin: 0 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -543,7 +555,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__copywrite {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 
@@ -565,6 +577,18 @@ body {
 @media screen and (min-width: 1280px) {
   .tickets {
     width: 100%;
+    flex-direction: row;
+  }
+}
+.tickets__Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__Container {
+    flex-direction: row;
+    width: 63.75rem;
   }
 }
 .tickets__wrapper {
@@ -576,13 +600,30 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .tickets__wrapper {
-    max-width: 63.75rem;
+    width: 20%;
+    height: 36rem;
+    justify-content: flex-start;
+    align-items: center;
   }
+}
+.tickets__item-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .tickets__header {
   display: flex;
   align-items: center;
   width: 90%;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 .tickets__head {
   font-weight: 700;
@@ -604,6 +645,16 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.tickets__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.tickets__list article:hover {
+  background-color: #fafafa;
+}
 .tickets__item {
   display: flex;
   align-items: flex-start;
@@ -618,6 +669,18 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.tickets__item--active {
+  background-color: #e1e1e1;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__item {
+    width: 100%;
+  }
+}
+.tickets .tickets__item--active,
+.tickets .tickets__item--active:hover {
+  background-color: #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .tickets__date, .tickets__venue, .tickets__location {
@@ -634,7 +697,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .tickets__date-tablet {
-    font-weight: bold;
+    font-weight: bolder;
   }
 }
 .tickets__date-header, .tickets__location-header, .tickets__venue-header {
@@ -673,6 +736,11 @@ body {
     width: 20%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .tickets__btn-wrapper {
+    margin-top: 0.5rem;
+  }
+}
 .tickets__btn {
   background-color: #323232;
   color: white;
@@ -680,7 +748,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 2rem;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -702,6 +770,11 @@ body {
     display: flex;
   }
 }
+@media screen and (min-width: 1280px) {
+  .tickets__labels {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   .tickets__date-header-desktop, .tickets__location-header-desktop {
     font-size: 1rem;
@@ -715,6 +788,7 @@ body {
     width: 20%;
     font-size: 1rem;
     color: #afafaf;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 768px) {

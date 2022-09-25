@@ -1,30 +1,25 @@
 // creating an array of the pre-made comments
-const comments = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    date: " 12/20/2020",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+let comments = [];
+const getCommentAPI = () => {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335"
+    )
+    .then((response) => {
+      console.log(response);
+      comments = response.data;
+      comments.sort((a, b) => (a.timestamp < b.timestamp ? 1 : -1));
+      renderComments();
+    });
+};
+
+getCommentAPI();
 
 const renderComments = () => {
   const commentsEl = document.querySelector(".conversation__section");
 
   for (let i = 0; i < comments.length; i++) {
-    const newDiv = document.createElement("div");
+    const newDiv = document.createElement("article");
     newDiv.classList.add("conversation__item");
     commentsEl.appendChild(newDiv);
 
@@ -51,7 +46,14 @@ const renderComments = () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("conversation__date");
-    dateEl.innerText = comments[i].date;
+    dateEl.innerText = new Date(comments[i].timestamp).toLocaleDateString(
+      "en-US",
+      {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }
+    );
     commentHeaders.appendChild(dateEl);
 
     const commentEl = document.createElement("p");
@@ -61,7 +63,7 @@ const renderComments = () => {
   }
 };
 
-renderComments();
+// renderComments();
 
 let now = new Date();
 console.log(now);
@@ -70,24 +72,25 @@ console.log(now);
 const handleForm = (event) => {
   event.preventDefault();
 
-  const formData = {
-    name: event.target.fullName.value,
-    date: new Date().toLocaleDateString(),
-    comment: event.target.comment.value,
-  };
-
-  comments.unshift(formData);
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=d7bef51b-651b-4a63-86e1-2327e85bd335",
+      {
+        name: event.target.fullName.value,
+        comment: event.target.comment.value,
+      }
+    )
+    .then((response) => {
+      console.log(response);
+      comments = response.data;
+      commentList.innerHTML = null;
+      getCommentAPI();
+      event.target.reset();
+    });
 
   const commentList = document.querySelector(".conversation__section");
 
   console.log(commentList);
-
-  commentList.innerHTML = "";
-
-  renderComments();
-
-  event.target.fullName.value = "";
-  event.target.comment.value = "";
 };
 
 // create comment div
