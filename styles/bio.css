@@ -255,8 +255,12 @@ body {
     align-items: flex-start;
   }
 }
+.hero__title-container {
+  width: 90%;
+}
 @media screen and (min-width: 1280px) {
   .hero__title-container {
+    width: 100%;
     display: flex;
   }
 }
@@ -303,7 +307,7 @@ body {
 @media screen and (min-width: 1280px) {
   .hero__title {
     width: 100%;
-    font-size: 4rem;
+    font-size: 3.3rem;
     padding: 0;
   }
 }
@@ -541,7 +545,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__header-wrapper {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -558,7 +562,7 @@ body {
   .footer__header {
     width: 100%;
     padding: 1rem 4rem 0 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -601,7 +605,7 @@ body {
 @media screen and (min-width: 1280px) {
   .footer__box {
     justify-content: flex-start;
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -617,6 +621,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__container2 {
     width: 33%;
+    margin: 0 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -696,7 +701,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .footer__copywrite {
-    width: 68rem;
+    width: 63.75rem;
   }
 }
 

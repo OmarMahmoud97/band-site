@@ -58,7 +58,7 @@
     @include media-desktop {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 
@@ -91,11 +91,6 @@
     background-color: $secondarycolor3;
   }
 
-  //   .highlighted-card,
-  // .highlighted-card:hover {
-  //   background-color: $brand-quinary;
-  // }
-
   &__item {
     display: flex;
     align-items: flex-start;
@@ -111,6 +106,10 @@
     }
     &--active {
       background-color: $secondarycolor2;
+    }
+
+    @include media-desktop {
+      width: 100%;
     }
   }
 
@@ -139,7 +138,7 @@
 
   &__date-tablet {
     @include media-tablet {
-      font-weight: bold;
+      font-weight: bolder;
     }
   }
 
@@ -210,6 +209,9 @@
 
     @include media-tablet {
       display: flex;
+    }
+    @include media-desktop {
+      width: 100%;
     }
   }
 

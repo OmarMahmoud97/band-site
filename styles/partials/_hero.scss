@@ -40,7 +40,9 @@
   }
 
   &__title-container {
+    width: 90%;
     @include media-desktop {
+      width: 100%;
       display: flex;
     }
   }
@@ -80,7 +82,7 @@
 
     @include media-desktop {
       width: 100%;
-      font-size: 4rem;
+      font-size: 3.3rem;
       padding: 0;
     }
 
